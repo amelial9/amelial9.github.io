@@ -1,26 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import portraitPic from './assets/portrait.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <nav>
+        <div className="logo">
+            <h1><a href="https://ameliali.com/">Amelia Li</a></h1>
+        </div>
+      </nav>
+      <div className="introContainer">
+        <div className="sec1">
+          <img src={portraitPic} className="portrait" alt="Amelia notion portrait pic" />
+          <p class="name">Xiang (Amelia) Li</p>
+          <p>Informatics @ University of Washington</p>
+        </div>
+        <div className="sec2">
+
+        </div>
       </div>
     </>
   )
