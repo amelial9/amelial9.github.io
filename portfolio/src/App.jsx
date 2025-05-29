@@ -1,6 +1,14 @@
 import { useState } from 'react'
-import portraitPic from './assets/portrait.svg'
 import './App.css'
+
+import IconLink from './components/IconLink'
+import SectionHeader from './components/SectionHeader'
+
+import portraitPic from './assets/portrait.svg'
+import linkedin from './assets/linkedin.svg'
+import github from './assets/github.svg'
+import email from './assets/email.svg'
+
 
 function App() {
 
@@ -8,19 +16,41 @@ function App() {
     <>
       <nav>
         <div className="logo">
-            <h1><a href="https://ameliali.com/">Amelia Li</a></h1>
+            <h1>Amelia Li</h1>
         </div>
       </nav>
       <div className="introContainer">
         <div className="sec1">
           <img src={portraitPic} className="portrait" alt="Amelia notion portrait pic" />
-          <p class="name">Xiang (Amelia) Li</p>
+          <p className="name">Xiang (Amelia) Li</p>
           <p>Informatics @ University of Washington</p>
+          <div className="icons">
+            <IconLink href="https://www.linkedin.com/in/amelial9/" src={linkedin} alt="LinkedIn link" />
+            <IconLink href="https://github.com/amelial9" src={github} alt="GitHub link" />
+            <IconLink href="mailto:amelial9@uw.edu" src={email} alt="Email link" />
+          </div>
         </div>
+        <br></br>
         <div className="sec2">
-
+          <h1>Hi! I'm Amelia 👋</h1>
+          <p className="intro">
+              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for transforming data and technology into meaningful solutions, builder of everything from useful web apps to wonderfully questionable side projects. I love bringing ideas to life through code, transforming concepts into impactful solutions, and I'm constantly exploring new technologies to expand my skill set. Right now I'm diving deeper into full-stack development and data-driven projects. I'm excited to build products that combine thoughtful design and data-backed decisions, whether in industry, academia, or somewhere in between.
+          </p>
         </div>
       </div>
+
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <div className="experience">
+        <SectionHeader title="Experience" />
+      </div>
+
+      <footer style={{ textAlign: 'center', padding: '10px', fontSize: '14px', color: 'black' }}>
+        <p>© 2025 Amelia Li</p>
+      </footer>
+
     </>
   )
 }

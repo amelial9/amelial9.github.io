@@ -9,7 +9,7 @@
 }
 
 a:hover {
-  color: #d7d3bf;
+  color: #d7d3bf !important;
 }
 
 nav {
@@ -20,9 +20,8 @@ nav {
 }
 
 .portrait{
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
+  width: 13em;
+  height: 13em;
   object-fit: cover;
 }
 
@@ -30,6 +29,13 @@ nav {
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 0.3em;
+}
+
+.introContainer .sec1 {
+  flex: 2;
+}
+.introContainer .sec2 {
+  flex: 3;
 }
 
 .introContainer .sec div p {
@@ -41,11 +47,62 @@ nav {
   margin-top: 0;
 }
 
+.iconlinks {
+  width: 2.75em;
+  height:2.75em;
+}
+
+.sec2 h1,
+.sec2 p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: left;
+}
+
+.sec2 p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.sec2 a {
+  color: black;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-header hr {
+  flex-grow: 1;
+  height: 2px;
+  background-color: lightgray;
+  border: none;
+  margin-left: 1rem;
+  margin-top: 0.6rem;
+}
+
+.section-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.experience {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media (min-width: 768px) {
   .introContainer {
       display: flex;
       flex-direction: row;
       gap: 20px;
       padding: 50px;
+  }
+
+  .experience {
+    margin-left: 7rem;
+    margin-right: 7rem;
   }
 }
