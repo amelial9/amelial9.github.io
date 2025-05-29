@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 
 import IconLink from './components/IconLink'
-import SectionHeader from './components/SectionHeader'
 
 import portraitPic from './assets/portrait.svg'
 import linkedin from './assets/linkedin.svg'
@@ -31,6 +30,7 @@ function App() {
           </div>
         </div>
         <br></br>
+        <br></br>
         <div className="sec2">
           <h1>Hi! I'm Amelia 👋</h1>
           <p className="intro">
@@ -42,10 +42,6 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
-
-      <div className="experience">
-        <SectionHeader title="Experience" />
-      </div>
 
       <footer style={{ textAlign: 'center', padding: '10px', fontSize: '14px', color: 'black' }}>
         <p>© 2025 Amelia Li</p>
