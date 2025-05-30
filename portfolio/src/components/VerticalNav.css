@@ -47,13 +47,12 @@
   transform: translateY(-2px);
 }
 
-
 @media screen and (min-width: 768px) {
   .vertical-nav {
     width: 200px;
     height: 100vh;
     padding: 2rem 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
     text-align: left;
   }
 

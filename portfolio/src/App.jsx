@@ -14,10 +14,6 @@ function App() {
   return (
     <>
       <VerticalNav />
-
-      <br></br>
-      <br></br>
-      <br></br>
       
       <div className="main-content" >
         <div className="introContainer" id="about">
@@ -46,7 +42,7 @@ function App() {
         <br></br>
         <br></br>
         
-        <section id="timeline">
+        <section id="experiences">
           <Timeline />
         </section>
 

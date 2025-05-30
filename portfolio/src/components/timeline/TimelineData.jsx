@@ -1,5 +1,12 @@
 export const timelineData = [
   {
+    date: 'Sep. 2023 – Jun. 2026 (Expected)',
+    title: '🎓 University of Washington',
+    subtitle: 'B.S. in Informatics',
+    description: 'Relevant courses: Data Structures and Algorithms, Databases and Data Modeling, Client-Side Development, Server-Side Development, Machine Learning, Matrix Algebra, and more.',
+    skills: [],
+  },
+  {
     date: 'Mar. 2025 - Present',
     title: 'Teaching Assistant',
     subtitle: 'University of Washington Information School',
