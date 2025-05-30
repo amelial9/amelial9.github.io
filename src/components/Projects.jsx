@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Projects.css';
 
 import datathon2025 from '../assets/projects/datathon2025.svg';
-import notes from '../assets/projects/notes.svg';
 import voxtune from '../assets/projects/voxtune.svg';
 import worthywave from '../assets/projects/worthywave.svg';
 import info330 from '../assets/projects/info330.svg';
