@@ -11,12 +11,6 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -59,4 +53,25 @@
   text-align: left;
   display: block;
   margin-left: 0;
+}
+
+.main-content {
+  margin-left: 0;
+  padding: 0 2rem;
+}
+
+nav {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .vertical-nav {
+    display: block;
+  }
+  
 }
