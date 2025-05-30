@@ -16,15 +16,15 @@ export const timelineData = [
   {
     date: 'Sep. 2024 - Present',
     title: 'Research Assistant',
-    subtitle: 'Golden Lab, Department of Neurobiology and Biophysics',
-    description: 'Conducting data analysis; visualizing data output and model predictions',
+    subtitle: 'Golden Lab, Dept. of Neurobiology and Biophysics',
+    description: 'Analyze physiological signal data from wireless implants; build and visualize machine learning models to detect behavioral patterns in animals.',
     skills: ['Python', 'OpenCV', 'Machine Learning', 'Data Visualization', 'Behavioral Data Annotation'],
   },
   {
     date: 'Jul. 2024 - Aug. 2024',
     title: 'Software Engineering Intern',
     subtitle: 'Baixing.com',
-    description: 'Conducted research and testing on DSPy',
+    description: 'Researched DSPy to simulate conversational styles via LLMs; automated response testing and improved server image deployment for a digital clone app.',
     skills: ['LLMs', 'Server Deployment'],
   }
 ]; 

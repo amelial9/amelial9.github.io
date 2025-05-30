@@ -4,6 +4,7 @@ import './App.css'
 import IconLink from './components/IconLink'
 import Timeline from './components/timeline/Timeline'
 import VerticalNav from './components/VerticalNav'
+import Projects from './components/Projects'
 
 import portraitPic from './assets/portrait.svg'
 import linkedin from './assets/linkedin.svg'
@@ -33,7 +34,15 @@ function App() {
           <div className="sec2">
             <h1>Hi! I'm Amelia 👋</h1>
             <p className="intro">
-                I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for transforming data and technology into meaningful solutions, builder of everything from useful web apps to wonderfully questionable side projects. I love bringing ideas to life through code, transforming concepts into impactful solutions, and I'm constantly exploring new technologies to expand my skill set. Right now I'm diving deeper into full-stack development and data-driven projects. I'm excited to build products that combine thoughtful design and data-backed decisions, whether in industry, academia, or somewhere in between.
+              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for transforming data and technology into meaningful solutions. 
+              I'm a builder of everything from useful web apps to wonderfully questionable side projects, and I thrive on bringing ideas to life through code. 
+            </p>
+            <p>
+              Right now I'm diving deeper into full-stack development and data-driven projects, creating prouducts that combine throughtful design with data-backed decisions.
+              I'm especially excited about working at the intersection of software engineering, machine learning and data science, where I can help develop tools that are both innovative and impactful.
+            </p>
+            <p>
+              Outside of code, you'll probably catch me rewatching <i>Hamilton</i> or <i>SIX</i>, and I firmly believe they make the best background music for working and debugging.
             </p>
           </div>
         </div>
@@ -44,6 +53,14 @@ function App() {
         
         <section id="experiences">
           <Timeline />
+        </section>
+
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <section id="projects">
+          <Projects />
         </section>
 
         <br></br>
