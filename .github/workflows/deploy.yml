@@ -36,10 +36,12 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Configure MIME types
         run: |
+          mkdir -p dist
           echo '{
             "*.js": "application/javascript",
             "*.jsx": "application/javascript",
-            "*.mjs": "application/javascript"
+            "*.mjs": "application/javascript",
+            "*.css": "text/css"
           }' > dist/_headers
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
