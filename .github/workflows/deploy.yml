@@ -34,6 +34,13 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Configure MIME types
+        run: |
+          echo '{
+            "*.js": "application/javascript",
+            "*.jsx": "application/javascript",
+            "*.mjs": "application/javascript"
+          }' > dist/_headers
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
