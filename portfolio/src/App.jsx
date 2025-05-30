@@ -2,15 +2,14 @@ import { useState } from 'react'
 import './App.css'
 
 import IconLink from './components/IconLink'
+import Timeline from './components/timeline/Timeline'
 
 import portraitPic from './assets/portrait.svg'
 import linkedin from './assets/linkedin.svg'
 import github from './assets/github.svg'
 import email from './assets/email.svg'
 
-
 function App() {
-
   return (
     <>
       <nav>
@@ -42,11 +41,18 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
+      
+      <Timeline />
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       <footer style={{ textAlign: 'center', padding: '10px', fontSize: '14px', color: 'black' }}>
         <p>© 2025 Amelia Li</p>
       </footer>
-
     </>
   )
 }
