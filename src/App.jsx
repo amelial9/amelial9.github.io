@@ -3,6 +3,7 @@ import './App.css'
 
 import IconLink from './components/IconLink'
 import Timeline from './components/timeline/Timeline'
+import Education from './components/education/Education'
 import VerticalNav from './components/VerticalNav'
 import Projects from './components/Projects'
 
@@ -53,6 +54,14 @@ function App() {
         
         <section id="experiences">
           <Timeline />
+        </section>
+
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <section id="education">
+          <Education />
         </section>
 
         <br></br>
