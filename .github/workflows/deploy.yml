@@ -30,6 +30,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Clean dist folder
+        run: rm -rf dist
       - name: Build
         run: npm run build
       - name: Setup Pages
