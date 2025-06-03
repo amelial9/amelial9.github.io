@@ -24,8 +24,7 @@ const developmentProjects = [
     title: "VoxTune",
     description: "Developed VoxTune, an interactive vocal warmup web application that allows users to upload, organize, and practice vocal exercises. Built with React and Firebase to enable content customization.",
     image: voxtune,
-    github: "https://github.com/amelial9/VoxTune",
-    link: "https://voxtune-info340-wi25.web.app/"
+    github: "https://github.com/amelial9/VoxTune"
   },
   {
     title: "Global Inequality Insights Database",
