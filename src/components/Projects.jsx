@@ -8,11 +8,19 @@ import info330 from '../assets/projects/info330.svg';
 import mbti from '../assets/projects/mbti.svg';
 import tempad from '../assets/projects/tempad.svg';
 import roomio from '../assets/projects/roomio.svg';
+import crossly from '../assets/projects/crossly.svg';
 
 import githubIcon from '../assets/githublink.svg';
 import linkIcon from '../assets/link.svg';
 
 const developmentProjects = [
+  {
+    title: "Crossly",
+    description: "Developed an interactive full-stack web application built with React and Node.js that generates custom crossword puzzles from user-inputted vocabulary terms and definitions, featuring Azure authentication and MongoDB storage.",
+    image: crossly,
+    github: "https://github.com/info441-sp25/INFO441-Group5-25SP",
+    link: "https://info441-group5-jesteban-crhubnc4f9b7fncs.westus-01.azurewebsites.net/"
+  },
   {
     title: "Healthcare Cost Prediction Model - Datathon 2025",
     description: "Developed machine learning models to predict hospital inpatient mean costs using healthcare data. 🥈 Second place in Machine Learning and 🥉 third place in Data Visualization",
