@@ -1,12 +1,12 @@
-import { timelineData } from './TimelineData';
-import './Timeline.css';
+import { experiencesData } from './ExperiencesData';
+import './Experiences.css';
 
-const Timeline = () => {
+const Experiences = () => {
   return (
     <div className="experience-section">
       <h2 className="section-title">Experience</h2>
       <div className="experience-grid">
-        {timelineData.map((item, index) => (
+        {experiencesData.map((item, index) => (
           <div key={index} className="experience-card">
             <div className="experience-date">{item.date}</div>
             <h3 className="experience-title">{item.title}</h3>
@@ -26,4 +26,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline; 
+export default Experiences; 

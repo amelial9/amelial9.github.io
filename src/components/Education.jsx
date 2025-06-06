@@ -1,4 +1,4 @@
-import { educationData } from '../timeline/TimelineData';
+import { educationData } from './experiences/ExperiencesData';
 import './Education.css';
 
 const Education = () => {

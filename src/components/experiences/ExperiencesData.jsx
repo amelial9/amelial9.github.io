@@ -1,4 +1,4 @@
-export const timelineData = [
+export const experiencesData = [
   {
     date: 'Mar. 2025 - Present',
     title: 'Teaching Assistant',

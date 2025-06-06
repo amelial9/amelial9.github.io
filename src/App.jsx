@@ -2,10 +2,10 @@ import { useState } from 'react'
 import './App.css'
 
 import IconLink from './components/IconLink'
-import Timeline from './components/timeline/Timeline'
-import Education from './components/education/Education'
+import Experiences from './components/experiences/Experiences'
+import Education from './components/Education'
 import VerticalNav from './components/VerticalNav'
-import Projects from './components/Projects'
+import Projects from './components/projects/Projects'
 
 import portraitPic from './assets/portrait.svg'
 import linkedin from './assets/linkedin.svg'
@@ -53,7 +53,7 @@ function App() {
         <br></br>
         
         <section id="experiences">
-          <Timeline />
+          <Experiences />
         </section>
 
         <br></br>
