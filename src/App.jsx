@@ -35,7 +35,7 @@ function App() {
           <div className="sec2">
             <h1>Hi! I'm Amelia 👋</h1>
             <p className="intro">
-              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for transforming data and technology into meaningful solutions. 
+              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for harnessing data and technology to create impactful solutions. 
               I'm a builder of everything from useful web apps to wonderfully questionable side projects, and I thrive on bringing ideas to life through code. 
             </p>
             <p>
