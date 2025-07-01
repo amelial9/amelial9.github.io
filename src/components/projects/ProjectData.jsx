@@ -6,6 +6,7 @@ import mbti from '../../assets/projects/mbti.svg';
 import tempad from '../../assets/projects/tempad.svg';
 import roomio from '../../assets/projects/roomio.svg';
 import crossly from '../../assets/projects/crossly.svg';
+import petswipe from '../../assets/projects/petswipe.svg';
 
 export const developmentProjects = [
     {
@@ -27,6 +28,12 @@ export const developmentProjects = [
       description: "Developed VoxTune, an interactive vocal warmup web application that allows users to upload, organize, and practice vocal exercises. Built with React and Firebase to enable content customization.",
       image: voxtune,
       github: "https://github.com/amelial9/VoxTune"
+    },
+    {
+      title: "PetSwipe",
+      description: "Built an iOS mobile app using Swift and UIKit that helps users discover and match with adoptable pets through a swipe-based interface. Features include pet profiles, match notifications, map integration, user authentication, and Firebase backend services.",
+      image: petswipe,
+      github: "https://github.com/wena04/petswipe"
     },
     {
       title: "Global Inequality Insights Database",
