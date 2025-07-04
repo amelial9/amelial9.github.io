@@ -13,8 +13,7 @@ export const developmentProjects = [
       title: "Crossly",
       description: "Developed an interactive full-stack web application built with React and Node.js that generates custom crossword puzzles from user-inputted vocabulary terms and definitions, featuring MongoDB storage and Azure Authentication.",
       image: crossly,
-      github: "https://github.com/info441-sp25/INFO441-Group5-25SP",
-      link: "https://info441-group5-jesteban-crhubnc4f9b7fncs.westus-01.azurewebsites.net/"
+      github: "https://github.com/info441-sp25/INFO441-Group5-25SP"
     },
     {
       title: "Healthcare Cost Prediction Model - Datathon 2025",
