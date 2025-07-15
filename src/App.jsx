@@ -35,12 +35,11 @@ function App() {
           <div className="sec2">
             <h1>Hi! I'm Amelia 👋</h1>
             <p className="intro">
-              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a passion for harnessing data and technology to create impactful solutions. 
-              I'm a builder of everything from useful web apps to wonderfully questionable side projects, and I thrive on bringing ideas to life through code. 
+              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a love for building thoughtful, user-centered tech. 
+              I'm a builder of everything from useful web apps to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking – whether it’s shipping full-stack web apps, coordinating research timelines, or organizing collaborative projects. 
             </p>
             <p>
-              Right now I'm diving deeper into full-stack development and data-driven projects, creating prouducts that combine throughtful design with data-backed decisions.
-              I'm especially excited about working at the intersection of software engineering, machine learning and data science, where I can help develop tools that are both innovative and impactful.
+              My background spans everything from launching React/Firebase apps to facilitating technical events as a student leader. Lately, I’ve been especially interested in how planning, design, and engineering come together to bring ideas to life, and how great tools are built not just with code, but with intention.
             </p>
             <p>
               Outside of code, you'll probably catch me rewatching <i>Hamilton</i> or <i>SIX</i>, and I firmly believe they make the best background music for working and debugging.
