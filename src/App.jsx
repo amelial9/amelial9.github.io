@@ -34,10 +34,10 @@ function App() {
           <br></br>
           <div className="sec2">
             <h1>
-              Hi! 👋 I'm Amelia , a {' '}
+              Hi! 👋 I'm Amelia, <br></br> {' '}
               <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
                 <Typewriter
-                  words={['developer', 'student studying Informatics', 'organized planner', 'boba + coffee enthusiast']}
+                  words={['a developer', 'an Informatics student', 'an organized planner', 'a boba + coffee enthusiast']}
                   loop
                   cursor
                   cursorStyle="|"
