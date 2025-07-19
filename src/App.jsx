@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Typewriter } from 'react-simple-typewriter';
 import './App.css'
 
 import IconLink from './components/IconLink'
@@ -33,7 +33,20 @@ function App() {
           <br></br>
           <br></br>
           <div className="sec2">
-            <h1>Hi! I'm Amelia 👋</h1>
+            <h1>
+              Hi! 👋 I'm Amelia , a {' '}
+              <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
+                <Typewriter
+                  words={['developer', 'student studying Informatics', 'organized planner', 'boba + coffee enthusiast']}
+                  loop
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1500}
+                />
+              </span>
+            </h1>
             <p className="intro">
               I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a love for building thoughtful, user-centered tech. 
               I'm a builder of everything from practical tools to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking – whether it’s shipping a product from scratch, coordinating research timelines, or organizing collaborative projects. 

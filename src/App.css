@@ -16,6 +16,11 @@
   margin-top: 3rem;
 }
 
+.typing-span{
+  display: inline-block;
+  min-width: 180px
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
