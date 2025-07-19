@@ -4,11 +4,11 @@
   margin: 0 auto;
 }
 
-.project-carousel-section {
+.project-carousel-sec {
   margin-bottom: 4rem;
 }
 
-.project-carousel-section h2 {
+.project-carousel-sec h2 {
   text-align: center;
   margin-bottom: 2rem;
   color: #473C35;
@@ -22,12 +22,54 @@
   opacity: 0.3;
 }
 
-.projects-carousel {
+/* Horizontal scrolling container */
+.projects-scroll-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  position: relative;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: #473C35 #f0f0f0;
+}
+
+.projects-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb {
+  background: #473C35;
+  border-radius: 4px;
+}
+
+.projects-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #5a4d44;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  color: #473C35;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #e0e0e0;
 }
 
 .project-card {
@@ -35,9 +77,9 @@
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
   transition: transform 0.3s ease;
+  flex: 0 0 300px;
+  width: 300px;
 }
 
 .project-card:hover {
@@ -49,12 +91,12 @@
   height: 300px;
   object-fit: contain;
   border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .project-card h3 {
   color: #473C35;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
   font-size: 1.5rem;
 }
 
@@ -148,7 +190,9 @@
   }
 
   .project-card {
-    max-width: 100%;
+    flex: 0 0 280px;
+    width: 280px;
+    padding: 1rem;
   }
 
   .project-card img {
@@ -175,5 +219,11 @@
 
   .project-link span {
     font-size: 0.8rem;
+  }
+
+  /* Mobile scrolling adjustments */
+  .projects-scroll-container {
+    gap: 0.5rem;
+    padding: 0.25rem 0;
   }
 } 

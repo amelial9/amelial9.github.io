@@ -12,7 +12,7 @@ const Education = () => {
               <h3 className="education-title">{item.title}</h3>
               <div className="education-subtitle-container">
                 <h4 className="education-subtitle">{item.subtitle}</h4>
-                <span className="education-date">{item.date}</span>
+                {/* <span className="education-date">{item.date}</span> */}
               </div>
             </div>
             <div className="education-details">

@@ -72,16 +72,14 @@ function App() {
         <br></br>
         <br></br>
 
-        <section id="education">
-          <Education />
+        <section id="projects">
+          <Projects />
         </section>
 
         <br></br>
-        <br></br>
-        <br></br>
 
-        <section id="projects">
-          <Projects />
+        <section id="education">
+          <Education />
         </section>
 
         <br></br>

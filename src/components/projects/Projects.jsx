@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import './Projects.css';
 import { developmentProjects, prototypeProjects } from './ProjectData';
-
 import githubIcon from '../../assets/githublink.svg';
 import linkIcon from '../../assets/link.svg';
 
@@ -28,44 +26,26 @@ function ProjectLinks({ project }) {
 }
 
 function ProjectCarousel({ projects, title }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextProject = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevProject = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
-    <div className="project-carousel-section">
+    <div className='project-carousel-sec'>
       <h2>{title}</h2>
-      <div className="projects-carousel">
-        <button className="nav-button prev" onClick={prevProject}>
-          ←
-        </button>
-        <div className="project-card">
-          <img src={projects[currentIndex].image} alt={projects[currentIndex].title} />
-          <h3>{projects[currentIndex].title}</h3>
-          <p>{projects[currentIndex].description}</p>
-          <ProjectLinks project={projects[currentIndex]} />
-        </div>
-        <button className="nav-button next" onClick={nextProject}>
-          →
-        </button>
-      </div>
-      <div className="project-dots">
-        {projects.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(index)}
-          />
+      <div className="projects-scroll-container">
+        {projects.map((project, projectIndex) => (
+          <div key={projectIndex} className="project-card">
+            <img src={project.image} alt={project.title} className="project-image" />
+            <h3 style={{ height: '6rem' }}>
+              {project.title}
+              </h3>
+            {project.tech && project.tech.length > 0 && (
+              <div className="tech">
+                {project.tech.map((tech, techIndex) => (
+                  <span key={`${projectIndex}-${techIndex}`} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+            )}
+            <p>{project.description}</p>
+            <ProjectLinks project={project} />
+          </div>
         ))}
       </div>
     </div>
