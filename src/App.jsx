@@ -48,15 +48,16 @@ function App() {
               </span>
             </h1>
             <p className="intro">
-              I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a love for building thoughtful, user-centered tech. 
-              I'm a builder of everything from practical tools to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking – whether it’s shipping a product from scratch, coordinating research timelines, or organizing collaborative projects. 
+              🎓 I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a love for building thoughtful, user-centered tech. 
+              I'm a builder of everything from practical tools to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking. 
             </p>
             <p>
-              My background spans full-stack development and student-led initiatives, and I’m especially interested in how planning, design, and engineering come together to shape meaningful, intentional tools.
+              💡 Outside of code, you'll probably catch me rewatching <i>Hamilton</i> or <i>SIX</i>, and I firmly believe they make the best background music for working and debugging.
             </p>
-            <p>
-              Outside of code, you'll probably catch me rewatching <i>Hamilton</i> or <i>SIX</i>, and I firmly believe they make the best background music for working and debugging.
-            </p>
+            <br></br>
+            <i style={{fontSize: '15px', color: '#473C35', display: 'block', textAlign: 'left', marginLeft: '30px'}}>
+             ⚙️ Full-Stack Dev • 🧠 Product Thinking • 🧋 Boba Dev Hours
+            </i>
           </div>
         </div>
 
