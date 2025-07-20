@@ -22,8 +22,8 @@ const VerticalNav = () => {
       <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
         <a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</a>
         <a href="#experiences" className="nav-link" onClick={() => setIsMenuOpen(false)}>Experiences</a>
-        <a href="#education" className="nav-link" onClick={() => setIsMenuOpen(false)}>Education</a>
         <a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
+        <a href="#education" className="nav-link" onClick={() => setIsMenuOpen(false)}>Education</a>
         <a href="https://notes.ameliali.com/" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>Notes</a>
       </div>
     </div>
