@@ -11,8 +11,8 @@ const Education = () => {
             <div className="education-header">
               <h3 className="education-title">{item.title}</h3>
               <div className="education-subtitle-container">
-                <h4 className="education-subtitle">{item.subtitle}</h4>
-                {/* <span className="education-date">{item.date}</span> */}
+                <i><span className="education-subtitle">{item.subtitle}</span></i>
+                <i><span className="education-date">{item.date}</span></i>
               </div>
             </div>
             <div className="education-details">

@@ -37,7 +37,7 @@ function App() {
               Hi! 👋 I'm Amelia, <br></br> {' '}
               <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
                 <Typewriter
-                  words={['a developer', 'an Informatics student', 'an organized planner', 'a boba + coffee enthusiast']}
+                  words={['a developer', 'a CS + INFO student', 'an organized planner', 'a boba + coffee enthusiast']}
                   loop
                   cursor
                   cursorStyle="|"
@@ -48,7 +48,7 @@ function App() {
               </span>
             </h1>
             <p className="intro">
-              🎓 I'm a second-year <a href="https://ischool.uw.edu/programs/informatics/what-is-informatics" target="_blank">Informatics</a> student at the University of Washington <a href="https://ischool.uw.edu/about" target="_blank">iSchool</a> with a love for building thoughtful, user-centered tech. 
+              🎓 I'm a third-year CS and Informatics student at the University of Washington with a love for building thoughtful, user-centered tech. 
               I'm a builder of everything from practical tools to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking. 
             </p>
             <p>
