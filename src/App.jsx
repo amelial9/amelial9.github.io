@@ -23,7 +23,7 @@ function App() {
           <div className="sec1">
             <img src={portraitPic} className="portrait" alt="Amelia notion portrait pic" />
             <p className="name">Amelia (Xiang) Li</p>
-            <p>Informatics @ University of Washington</p>
+            <p>CS + Info @ University of Washington</p>
             <div className="icons">
               <IconLink href="https://www.linkedin.com/in/amelial9/" src={linkedin} alt="LinkedIn link" />
               <IconLink href="https://github.com/amelial9" src={github} alt="GitHub link" />
