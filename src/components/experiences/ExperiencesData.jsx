@@ -1,5 +1,12 @@
 export const experiencesData = [
   {
+    date: 'Aug. 2025 - Present',
+    title: 'Cursor Campus Lead @ UW Seattle',
+    subtitle: 'Anysphere',
+    description: 'Grow Cursor’s presence on campus',
+    skills: ['Community Engagement', 'Project Management', 'Event Planning'],
+  },
+  {
     date: 'Mar. 2025 - Present',
     title: 'Teaching Assistant',
     subtitle: 'University of Washington Information School',
