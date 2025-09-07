@@ -5,6 +5,7 @@ export const experiencesData = [
     subtitle: 'Anysphere',
     description: 'Grow Cursor’s presence on campus',
     skills: ['Community Engagement', 'Project Management', 'Event Planning'],
+    logo: 'https://media.licdn.com/dms/image/v2/D560BAQF6-ABODrH5xg/company-logo_200_200/company-logo_200_200/0/1737272318199?e=1759968000&v=beta&t=Z2RMCy_oPE71FbbWvn_ZDYHNKl6VdJX1LCIrkaSBUNo',
   },
   {
     date: 'Mar. 2025 - Present',
@@ -12,6 +13,7 @@ export const experiencesData = [
     subtitle: 'University of Washington Information School',
     description: 'Leading weekly lab sessions for 30+ students, covering topics in database design, SQL, and data modeling',
     skills: ['SQL', 'Relational Databases', 'Data Modeling', 'Teaching & Mentorship'],
+    logo: 'https://media.licdn.com/dms/image/v2/D560BAQEx1RNd1IUhjQ/company-logo_200_200/company-logo_200_200/0/1720742899056/uw_ischool_logo?e=1759968000&v=beta&t=u6zlJcBH0MZqMgSVjgA_Dp4QDPk30UAqg5I8Oz58pzs',
   },
   {
     date: 'Sep. 2024 - Present',
@@ -19,6 +21,7 @@ export const experiencesData = [
     subtitle: 'Golden Lab, Department of Neurobiology and Biophysics, University of Washington',
     description: 'Analyze physiological signal data from wireless implants; build and visualize machine learning models to detect behavioral patterns in animals.',
     skills: ['Python', 'Machine Learning', 'Data Visualization'],
+    logo: 'https://images.squarespace-cdn.com/content/v1/5b1b659871069912b3022368/1566324703483-F7Z3FI6BDLC9FQD5THZM/Golden+Lab+Color+Large.png?format=750w',
   }
 ];
 
