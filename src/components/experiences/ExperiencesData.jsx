@@ -2,7 +2,7 @@ export const experiencesData = [
   {
     date: 'Aug. 2025 - Present',
     title: 'Cursor Campus Lead @ UW Seattle',
-    subtitle: 'Anysphere',
+    subtitle: 'Cursor',
     description: 'Grow Cursor’s presence on campus',
     skills: ['Community Engagement', 'Project Management', 'Event Planning'],
     logo: 'https://media.licdn.com/dms/image/v2/D560BAQF6-ABODrH5xg/company-logo_200_200/company-logo_200_200/0/1737272318199?e=1759968000&v=beta&t=Z2RMCy_oPE71FbbWvn_ZDYHNKl6VdJX1LCIrkaSBUNo',
