@@ -25,6 +25,7 @@ const VerticalNav = () => {
         <a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>Projects</a>
         <a href="#education" className="nav-link" onClick={() => setIsMenuOpen(false)}>Education</a>
         <a href="https://notes.ameliali.com/" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>Notes</a>
+        <a href="https://ameli9.notion.site/amelia-23e5d09895ac8047a604fff42e6527d5" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>/amelia</a>
       </div>
     </div>
   );
