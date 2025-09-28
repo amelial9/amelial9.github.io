@@ -5,7 +5,7 @@ export const experiencesData = [
     subtitle: 'Cursor',
     description: 'Grow Cursor’s presence on campus',
     skills: ['Community Engagement', 'Project Management', 'Event Planning'],
-    logo: 'https://media.licdn.com/dms/image/v2/D560BAQF6-ABODrH5xg/company-logo_200_200/company-logo_200_200/0/1737272318199?e=1759968000&v=beta&t=Z2RMCy_oPE71FbbWvn_ZDYHNKl6VdJX1LCIrkaSBUNo',
+    logo: 'https://media.licdn.com/dms/image/v2/D560BAQEu4qyR3HdirA/company-logo_200_200/B56ZlyiWLvHkAI-/0/1758563230753/cursorai_logo?e=1761782400&v=beta&t=WQfO6IwOIXBJqNRz6IrkuDoTZvhI22JcdJPEoNlwNbc',
   },
   {
     date: 'Mar. 2025 - Present',
