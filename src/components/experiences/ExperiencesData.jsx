@@ -13,7 +13,7 @@ export const experiencesData = [
     subtitle: 'University of Washington Information School',
     description: 'Leading weekly lab sessions for 30+ students, covering topics in database design, SQL, and data modeling',
     skills: ['SQL', 'Relational Databases', 'Data Modeling', 'Teaching & Mentorship'],
-    logo: 'https://media.licdn.com/dms/image/v2/D560BAQEx1RNd1IUhjQ/company-logo_200_200/company-logo_200_200/0/1720742899056/uw_ischool_logo?e=1759968000&v=beta&t=u6zlJcBH0MZqMgSVjgA_Dp4QDPk30UAqg5I8Oz58pzs',
+    logo: 'https://pbs.twimg.com/profile_images/1811552266492760064/UgMNbZtf_400x400.jpg',
   },
   {
     date: 'Sep. 2024 - Present',
