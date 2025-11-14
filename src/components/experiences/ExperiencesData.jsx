@@ -5,7 +5,7 @@ import goldenLabLogo from '../../assets/logos/goldenlab.png';
 export const experiencesData = [
   {
     date: 'Aug. 2025 - Present',
-    title: 'Cursor Campus Lead @ UW Seattle',
+    title: 'Campus Lead @ UW Seattle',
     subtitle: 'Cursor',
     description: 'Grow Cursor’s presence on campus',
     skills: ['Community Engagement', 'Project Management', 'Event Planning'],
