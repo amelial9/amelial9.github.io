@@ -3,6 +3,16 @@
   background-color: #FAFAFC;
 }
 
+body {
+  cursor: var(--cursor-image, auto), auto;
+}
+
+img:hover,
+a:hover,
+button:hover {
+  cursor: var(--cursor-image-hover, auto), auto;
+}
+
 a:hover {
   color: #d7d3bf !important;
 }
