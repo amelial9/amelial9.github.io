@@ -37,7 +37,7 @@ function App() {
               Hi! 👋 I'm Amelia, <br></br> {' '}
               <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
                 <Typewriter
-                  words={['a developer', 'a CS + INFO student', 'an organized planner', 'a boba + coffee enthusiast']}
+                  words={['a developer', 'a CS + INFO student', 'an organized planner', 'a community builder', 'a boba + coffee enthusiast']}
                   loop
                   cursor
                   cursorStyle="|"

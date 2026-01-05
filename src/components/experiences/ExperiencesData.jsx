@@ -34,7 +34,7 @@ export const educationData = [
     date: 'Sep. 2023 – Jun. 2027 (Expected)',
     title: 'University of Washington, Seattle',
     subtitle: 'B.S., CS + Informatics',
-    description: 'Relevant courses: Data Structures and Algorithms, Databases and Data Modeling, Client-Side Development, Server-Side Development, Mobile Development: IOS, Machine Learning, Linear Algebra, and more.',
+    description: 'Relevant courses: Data Structures and Algorithms, Databases and Data Modeling, Client-Side & Server-Side Development, Mobile Development: IOS, Machine Learning, Linear Algebra, Foundations of Computing, The Hardware/Software Interface, and more.',
     skills: [],
   }
 ]; 
