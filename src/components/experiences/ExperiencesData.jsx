@@ -23,7 +23,7 @@ export const experiencesData = [
     date: 'Sep. 2024 - Present',
     title: 'Research Assistant',
     subtitle: 'Golden Lab, Department of Neurobiology and Biophysics, University of Washington',
-    description: '🐁 develop random forest classifiers to label mice behavioral patterns',
+    description: '🐁 research mouse behavior',
     skills: ['Python', 'Machine Learning', 'Data Visualization'],
     logo: goldenLabLogo,
   }
