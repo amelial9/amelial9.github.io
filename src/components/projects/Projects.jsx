@@ -28,7 +28,9 @@ function ProjectLinks({ project }) {
 function ProjectCarousel({ projects, title }) {
   return (
     <div className='project-carousel-sec'>
-      <h2>{title}</h2>
+      <div className="section-title-wrapper">
+        <h2 className="section-title">{title}</h2>
+      </div>
       <div className="projects-scroll-container">
         {projects.map((project, projectIndex) => (
           <div key={projectIndex} className="project-card">
@@ -57,12 +59,16 @@ function Projects() {
     <div className="projects-section">
       <ProjectCarousel 
         projects={developmentProjects} 
-        title="💻 Development Projects" 
+        title="Development Projects"
       />
-      <div className="section-divider"></div>
+      <div className="section-divider">
+        <div className="divider-line"></div>
+        <div className="divider-ornament">◆</div>
+        <div className="divider-line"></div>
+      </div>
       <ProjectCarousel 
         projects={prototypeProjects} 
-        title="🖌️ Prototypes in the Wild" 
+        title="Prototypes in the Wild"
       />
     </div>
   );

@@ -8,18 +8,56 @@
   margin-bottom: 4rem;
 }
 
-.project-carousel-sec h2 {
+.section-title-wrapper {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #473C35;
-  font-size: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
 }
 
+.project-carousel-sec .section-title {
+  color: #473C35;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.project-carousel-sec .section-title::after {
+  display: none !important;
+  content: none !important;
+}
+
+
 .section-divider {
-  height: 2px;
-  background: linear-gradient(to right, transparent, #473C35, transparent);
-  margin: 3rem 0;
-  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+  gap: 1rem;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(71, 60, 53, 0.2) 20%,
+    rgba(71, 60, 53, 0.3) 50%,
+    rgba(71, 60, 53, 0.2) 80%,
+    transparent
+  );
+  max-width: 200px;
+}
+
+.divider-ornament {
+  color: #C7BDB5;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transform: rotate(45deg);
+  display: inline-block;
 }
 
 /* Horizontal scrolling container */
@@ -205,7 +243,15 @@
   }
 
   .section-divider {
-    margin: 2rem 0;
+    margin: 3rem 0;
+  }
+
+  .project-carousel-sec .section-title {
+    font-size: 1.75rem;
+  }
+
+  .divider-line {
+    max-width: 100px;
   }
 
   .project-links {
