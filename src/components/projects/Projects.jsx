@@ -62,9 +62,7 @@ function Projects() {
         title="Development Projects"
       />
       <div className="section-divider">
-        <div className="divider-line"></div>
-        <div className="divider-ornament">◆</div>
-        <div className="divider-line"></div>
+        <div className="divider-line-wavy"></div>
       </div>
       <ProjectCarousel 
         projects={prototypeProjects} 

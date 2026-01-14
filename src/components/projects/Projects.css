@@ -35,29 +35,94 @@
   align-items: center;
   justify-content: center;
   margin: 4rem 0;
-  gap: 1rem;
 }
 
+/* Option 1: Clean gradient line (current) */
 .divider-line {
-  flex: 1;
+  width: 100%;
+  max-width: 300px;
   height: 1px;
   background: linear-gradient(
     to right,
-    transparent,
+    transparent 0%,
     rgba(71, 60, 53, 0.2) 20%,
     rgba(71, 60, 53, 0.3) 50%,
     rgba(71, 60, 53, 0.2) 80%,
-    transparent
+    transparent 100%
   );
-  max-width: 200px;
 }
 
-.divider-ornament {
-  color: #C7BDB5;
-  font-size: 0.75rem;
+/* Option 2: Wavy line */
+.divider-line-wavy {
+  width: 100%;
+  max-width: 300px;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,6 Q25,0 50,6 T100,6' stroke='rgba(71, 60, 53, 0.25)' stroke-width='1' fill='none'/%3E%3C/svg%3E") repeat-x;
+  background-size: 100px 12px;
   opacity: 0.6;
-  transform: rotate(45deg);
-  display: inline-block;
+}
+
+/* Option 3: Double line */
+.divider-line-double {
+  width: 100%;
+  max-width: 300px;
+  height: 2px;
+  background: 
+    linear-gradient(to right, transparent 0%, rgba(71, 60, 53, 0.15) 20%, rgba(71, 60, 53, 0.15) 80%, transparent 100%) 0 0,
+    linear-gradient(to right, transparent 0%, rgba(71, 60, 53, 0.25) 20%, rgba(71, 60, 53, 0.25) 80%, transparent 100%) 0 1px;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+
+/* Option 4: Dashed line */
+.divider-line-dashed {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 8px,
+    rgba(71, 60, 53, 0.3) 8px,
+    rgba(71, 60, 53, 0.3) 12px
+  );
+  opacity: 0.6;
+}
+
+/* Option 5: Decorative ends */
+.divider-line-decorative {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(71, 60, 53, 0.2) 15%,
+    rgba(71, 60, 53, 0.3) 50%,
+    rgba(71, 60, 53, 0.2) 85%,
+    transparent 100%
+  );
+  position: relative;
+}
+
+.divider-line-decorative::before,
+.divider-line-decorative::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(71, 60, 53, 0.3);
+}
+
+.divider-line-decorative::before {
+  left: 10%;
+}
+
+.divider-line-decorative::after {
+  right: 10%;
 }
 
 /* Horizontal scrolling container */
@@ -251,7 +316,7 @@
   }
 
   .divider-line {
-    max-width: 100px;
+    max-width: 150px;
   }
 
   .project-links {
