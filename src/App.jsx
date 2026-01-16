@@ -18,7 +18,7 @@ function App() {
       <VerticalNav />
       
       <div className="main-content" >
-        <div className="introContainer" id="about">
+        <div className="introContainer" id="home">
 
           <div className="sec1">
             <img src={portraitPic} className="portrait" alt="Amelia notion portrait pic" />
