@@ -15,7 +15,13 @@
 .main-content {
   margin-top: 5rem;
   margin-left: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 769px) {
+  .main-content {
+    padding: 0 2rem;
+  }
 }
 
 .typing-span{

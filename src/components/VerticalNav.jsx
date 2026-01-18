@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './VerticalNav.css';
 import portraitPic from '../assets/portrait.svg';
 
@@ -6,6 +7,7 @@ const VerticalNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
 
   const toggleMenu = (e) => {
     e.preventDefault();
@@ -61,7 +63,8 @@ const VerticalNav = () => {
       </div>
 
       <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
-        <a href="#home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</a>
+        <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+        {/* <Link to="/research" className="nav-link" onClick={() => setIsMenuOpen(false)}>Research</Link> */}
         <a href="https://notes.ameliali.com/" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>Notes</a>
         <a href="https://ameli9.notion.site/amelia-23e5d09895ac8047a604fff42e6527d5" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>/amelia</a>
       </div>

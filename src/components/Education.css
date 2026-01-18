@@ -1,12 +1,12 @@
 .education-section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .section-title {
   color: #473C35;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   text-align: left;
   position: relative;
@@ -32,7 +32,7 @@
 
 .education-card {
   background: #FAFAFC;
-  padding: 1.5rem;
+  padding: 1.2rem;
   text-align: left;
 }
 
@@ -43,7 +43,7 @@
 
 .education-title {
   color: #473C35;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   text-align: left;
 }
@@ -57,7 +57,7 @@
 
 .education-subtitle {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: 500;
   text-align: left;
@@ -65,7 +65,7 @@
 
 .education-date {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   text-align: left;
 }
@@ -87,25 +87,25 @@
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .education-section {
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .education-card {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
   .education-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .education-subtitle,
   .education-date {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 } 

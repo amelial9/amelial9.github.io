@@ -1,0 +1,175 @@
+.research-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section-title {
+  color: #473C35;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #473C35;
+}
+
+.research-content {
+  /* Ready for future content */
+  min-height: 50px;
+}
+
+.research-focus {
+  margin-top: 1rem;
+}
+
+.research-focus-title {
+  color: #473C35;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.research-focus-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+.research-focus-link {
+  color: #473C35;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.research-focus-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #473C35;
+  transition: width 0.3s ease;
+}
+
+.research-focus-link:hover {
+  color: #6B5B4F;
+}
+
+.research-focus-link:hover::after {
+  width: 100%;
+}
+
+.research-pdf-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pdf-subheader {
+  color: #473C35;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  text-align: left;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.pdf-subheader::after {
+  content: ' ↗';
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.pdf-subheader:hover {
+  color: #6B5B4F;
+  text-decoration: underline;
+}
+
+.research-pdf {
+  display: none;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.research-more-text {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 2rem 0 0 0;
+  text-align: left;
+}
+
+@media (min-width: 769px) {
+  .research-section {
+    padding: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .research-focus {
+    margin-top: 1.5rem;
+  }
+  
+  .research-focus-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .research-focus-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  
+  .research-pdf-container {
+    margin-top: 3rem;
+    align-items: flex-start;
+  }
+  
+  .pdf-subheader {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.6px;
+  }
+  
+  .research-pdf {
+    display: block;
+    width: 500px;
+    height: 300px;
+  }
+  
+  .research-more-text {
+    text-align: left;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+  }
+}
