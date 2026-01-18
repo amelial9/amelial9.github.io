@@ -109,12 +109,37 @@
   text-decoration: underline;
 }
 
+.pdf-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pdf-decorative-frame {
+  position: relative;
+  padding: 12px;
+  background: transparent;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.pdf-decorative-frame::before {
+  display: none;
+}
+
+.pdf-decorative-frame::after {
+  display: none;
+}
+
 .research-pdf {
   display: none;
   width: 250px;
   height: 250px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(224, 224, 224, 0.6);
   border-radius: 4px;
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .research-more-text {
@@ -161,6 +186,43 @@
     letter-spacing: 0.6px;
   }
   
+  .pdf-wrapper {
+    margin-top: 0.5rem;
+  }
+
+  .pdf-decorative-frame {
+    padding: 16px;
+  }
+
+  .pdf-decorative-frame::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #473C35 0%, rgba(71, 60, 53, 0.3) 100%);
+    border-radius: 8px 0 0 8px;
+  }
+
+  .pdf-decorative-frame::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid rgba(71, 60, 53, 0.2);
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .pdf-decorative-frame:hover {
+    /* Subtle hover effect - keeping it minimal */
+  }
+
   .research-pdf {
     display: block;
     width: 500px;

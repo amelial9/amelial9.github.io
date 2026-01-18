@@ -92,7 +92,7 @@ function Home() {
         <br></br>
 
         <footer style={{ textAlign: 'center', padding: '10px', fontSize: '14px', color: '#473C35' }}>
-          <p>© 2025 Amelia Li</p>
+          <p>© 2026 Amelia Li</p>
         </footer>
       </div>
     </>

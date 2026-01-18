@@ -24,11 +24,15 @@ const HomeResearch = () => {
           >
             Presentation: 2025 Undergraduate Research Symposium
           </a>
-          <iframe
-            src={researchPdf}
-            className="research-pdf"
-            title="Undergrad Research Symposium 2025"
-          />
+          <div className="pdf-wrapper">
+            <div className="pdf-decorative-frame">
+              <iframe
+                src={researchPdf}
+                className="research-pdf"
+                title="Undergrad Research Symposium 2025"
+              />
+            </div>
+          </div>
           <p className="research-more-text">More research stuff coming once published :D</p>
         </div>
       </div>
