@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, #1a2847 0%, #3d5a80 30%, #98c1d9 60%, #e0e1dd 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .sky-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Animated background gradient */
+        .sky-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                #1a2847 0%, 
+                #2d4a6f 20%, 
+                #4a6fa5 40%, 
+                #7ba3cc 60%, 
+                #b8d4e8 80%, 
+                #e8f1f7 100%);
+            animation: skyShift 20s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes skyShift {
+            0%, 100% {
+                background: linear-gradient(to bottom, 
+                    #1a2847 0%, 
+                    #2d4a6f 20%, 
+                    #4a6fa5 40%, 
+                    #7ba3cc 60%, 
+                    #b8d4e8 80%, 
+                    #e8f1f7 100%);
+            }
+            50% {
+                background: linear-gradient(to bottom, 
+                    #0f1b2e 0%, 
+                    #1e3556 20%, 
+                    #3d5a80 40%, 
+                    #6a8db5 60%, 
+                    #a8c7e0 80%, 
+                    #dae8f3 100%);
+            }
+        }
+
+        /* Floating clouds */
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 100px;
+            filter: blur(20px);
+            animation: floatCloud linear infinite;
+            z-index: 1;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 100px;
+        }
+
+        .cloud-1 {
+            width: 200px;
+            height: 60px;
+            top: 20%;
+            left: -200px;
+            animation-duration: 50s;
+        }
+
+        .cloud-2 {
+            width: 150px;
+            height: 50px;
+            top: 40%;
+            left: -150px;
+            animation-duration: 60s;
+            animation-delay: 5s;
+        }
+
+        .cloud-3 {
+            width: 180px;
+            height: 55px;
+            top: 60%;
+            left: -180px;
+            animation-duration: 55s;
+            animation-delay: 10s;
+        }
+
+        .cloud-4 {
+            width: 220px;
+            height: 70px;
+            top: 15%;
+            left: -220px;
+            animation-duration: 65s;
+            animation-delay: 15s;
+        }
+
+        @keyframes floatCloud {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(100vw + 300px));
+            }
+        }
+
+        /* Light rays */
+        .light-rays {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 100vh;
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.1) 30%,
+                rgba(255, 255, 255, 0) 70%);
+            opacity: 0.5;
+            animation: rayPulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 2;
+            filter: blur(30px);
+        }
+
+        @keyframes rayPulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Floating particles (stars/light) */
+        .particle {
+            position: absolute;
+            background: rgba(255, 223, 128, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+            animation: particleFloat linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        /* Main content container */
+        .content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        /* Castle/Portal entrance */
+        .portal-entrance {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: portalGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes portalGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 20px rgba(135, 206, 250, 0.5));
+            }
+            50% {
+                filter: drop-shadow(0 0 40px rgba(135, 206, 250, 0.8));
+            }
+        }
+
+        .portal-entrance h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            background: linear-gradient(to right, #ffffff, #87ceeb, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleShimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes titleShimmer {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .portal-entrance p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        /* Navigation candles */
+        .nav-candles {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .candle {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .candle:hover {
+            transform: translateY(-10px);
+        }
+
+        .candle-flame {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #ffd700 0%, #ff8c00 40%, transparent 70%);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            animation: flameFlicker 2s ease-in-out infinite;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+            position: relative;
+        }
+
+        .candle-flame::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, #ffffff 0%, #ffd700 50%, transparent 70%);
+            border-radius: 50%;
+            animation: innerFlame 2s ease-in-out infinite;
+        }
+
+        @keyframes flameFlicker {
+            0%, 100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1) translateY(-5px);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes innerFlame {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+
+        .candle-label {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+        }
+
+        /* About section - like a constellation */
+        .about-constellation {
+            max-width: 700px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            margin-bottom: 3rem;
+        }
+
+        .about-constellation h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .about-constellation p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer spirits */
+        .footer-spirits {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portal-entrance h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-candles {
+                gap: 2rem;
+            }
+
+            .about-constellation {
+                padding: 2rem;
+            }
+
+            .about-constellation h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Interactive glow effect */
+        .glow-effect {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(135, 206, 250, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 5;
+            transition: all 0.1s ease;
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body>
+    <div class="sky-container">
+        <div class="sky-background"></div>
+        
+        <!-- Floating clouds -->
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+
+        <!-- Light rays -->
+        <div class="light-rays"></div>
+
+        <!-- Interactive glow effect -->
+        <div class="glow-effect" id="glowEffect"></div>
+
+        <!-- Main content -->
+        <div class="content">
+            <!-- Portal entrance -->
+            <div class="portal-entrance">
+                <h1>Your Name</h1>
+                <p>Journey Through the Clouds</p>
+            </div>
+
+            <!-- Navigation candles -->
+            <div class="nav-candles">
+                <a href="#about" class="candle">
+                    <div class="candle-flame"></div>
+                    <div class="candle-label">About</div>
+                </a>
+                <a href="#work" class="candle">
+                    <div class="candle-flame"></div>
+                    <div class="candle-label">Work</div>
+                </a>
+                <a href="#projects" class="candle">
+                    <div class="candle-flame"></div>
+                    <div class="candle-label">Projects</div>
+                </a>
+                <a href="#contact" class="candle">
+                    <div class="candle-flame"></div>
+                    <div class="candle-label">Contact</div>
+                </a>
+            </div>
+
+            <!-- About section -->
+            <div class="about-constellation" id="about">
+                <h2>✦ About Me ✦</h2>
+                <p>
+                    Like a child of light soaring through endless skies, I navigate the realm of creativity and innovation. 
+                    Each project is a constellation, each challenge a new cloud to explore. 
+                    Together, we can illuminate the path forward and create something truly magical.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-spirits">
+                <p>✨ Guided by light, inspired by sky ✨</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.querySelector('.sky-container');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 3 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.bottom = '0';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Interactive glow effect that follows mouse
+        const glowEffect = document.getElementById('glowEffect');
+        
+        document.addEventListener('mousemove', (e) => {
+            glowEffect.style.left = (e.clientX - 150) + 'px';
+            glowEffect.style.top = (e.clientY - 150) + 'px';
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
+        });
+
+        // Add extra glow pulse on candle hover
+        document.querySelectorAll('.candle').forEach(candle => {
+            candle.addEventListener('mouseenter', function() {
+                const flame = this.querySelector('.candle-flame');
+                flame.style.boxShadow = '0 0 60px rgba(255, 215, 0, 0.9)';
+            });
+            
+            candle.addEventListener('mouseleave', function() {
+                const flame = this.querySelector('.candle-flame');
+                flame.style.boxShadow = '0 0 40px rgba(255, 215, 0, 0.6)';
+            });
+        });
+    </script>
+</body>
+</html>
