@@ -11,10 +11,42 @@
             box-sizing: border-box;
         }
 
+        :root {
+            /* Dominant blues (otherworldly but natural) */
+            --blue-deep: #222f57;        /* softened, brighter twilight blue */
+            --blue-cornflower: #6f93d6;  /* soft cornflower */
+            --blue-periwinkle: #8ea6e8;  /* periwinkle */
+            --blue-lavender: #9fb0f1;    /* lavender-blue */
+
+            /* Purple undertones (shadows/mid-tones) */
+            --violet-muted: #5e4f7a;     /* muted violet */
+            --mauve-muted: #7a5b78;      /* mauve */
+
+            /* Warm accents (glows/windows/lanterns) */
+            --amber: #ffb14a;
+            --golden: #ffd27a;
+
+            /* Highlights (radiant sky/aurora) */
+            --peach-pink: #ffd6cf;       /* pale peachy-pink */
+            --white: #ffffff;
+
+            /* Cool whites (snow/clouds) */
+            --white-cool: rgba(235, 245, 255, 0.62);
+            --white-cool-soft: rgba(235, 245, 255, 0.52);
+        }
+
         body {
             font-family: 'Georgia', serif;
             overflow-x: hidden;
-            background: linear-gradient(to bottom, #1a2847 0%, #3d5a80 30%, #98c1d9 60%, #e0e1dd 100%);
+            /* Brighter, softer sky with smoother transitions */
+            background: linear-gradient(
+                to bottom,
+                var(--blue-deep) 0%,
+                #2b3964 22%,
+                var(--blue-cornflower) 50%,
+                var(--blue-periwinkle) 78%,
+                color-mix(in srgb, var(--white) 82%, var(--peach-pink) 18%) 100%
+            );
             min-height: 100vh;
             color: #fff;
         }
@@ -33,13 +65,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, 
-                #1a2847 0%, 
-                #2d4a6f 20%, 
-                #4a6fa5 40%, 
-                #7ba3cc 60%, 
-                #b8d4e8 80%, 
-                #e8f1f7 100%);
+            /* Match body background so the sky feels seamless and natural */
+            background: linear-gradient(
+                to bottom,
+                var(--blue-deep) 0%,
+                #2b3964 22%,
+                var(--blue-cornflower) 50%,
+                var(--blue-periwinkle) 78%,
+                color-mix(in srgb, var(--white) 82%, var(--peach-pink) 18%) 100%
+            );
             /* Keep sky brightness stable (no shifting animation) */
             animation: none;
             z-index: 0;
@@ -69,7 +103,7 @@
         /* Floating clouds */
         .cloud {
             position: absolute;
-            background: rgba(255, 255, 255, 0.6); /* keep current transparency */
+            background: var(--white-cool); /* cool blue-tinted whites */
             border-radius: 999px;
             filter: blur(20px);
             animation: floatCloud linear infinite;
@@ -80,7 +114,7 @@
         .cloud::after {
             content: '';
             position: absolute;
-            background: rgba(255, 255, 255, 0.5); /* keep current transparency */
+            background: var(--white-cool-soft);
             border-radius: 999px;
         }
 
@@ -152,9 +186,9 @@
             width: 400px;
             height: 100vh;
             background: linear-gradient(to bottom, 
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0.1) 30%,
-                rgba(255, 255, 255, 0) 70%);
+                rgba(255, 214, 207, 0.24) 0%,
+                rgba(235, 245, 255, 0.14) 28%,
+                rgba(235, 245, 255, 0.0) 72%);
             opacity: 0.5;
             animation: rayPulse 8s ease-in-out infinite;
             pointer-events: none;
@@ -174,7 +208,7 @@
         /* Floating particles (stars/light) */
         .particle {
             position: absolute;
-            background: rgba(255, 223, 128, 0.8);
+            background: rgba(255, 177, 74, 0.78); /* amber/golden */
             border-radius: 50%;
             pointer-events: none;
             z-index: 3;
@@ -219,10 +253,10 @@
 
         @keyframes portalGlow {
             0%, 100% {
-                filter: drop-shadow(0 0 20px rgba(135, 206, 250, 0.5));
+                filter: drop-shadow(0 0 20px rgba(159, 176, 241, 0.45));
             }
             50% {
-                filter: drop-shadow(0 0 40px rgba(135, 206, 250, 0.8));
+                filter: drop-shadow(0 0 40px rgba(255, 214, 207, 0.35));
             }
         }
 
@@ -231,8 +265,8 @@
             font-weight: 300;
             letter-spacing: 4px;
             margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-            background: linear-gradient(to right, #ffffff, #87ceeb, #ffffff);
+            text-shadow: 0 0 30px rgba(235, 245, 255, 0.65);
+            background: linear-gradient(to right, var(--white), var(--blue-lavender), var(--peach-pink), var(--white));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -279,7 +313,7 @@
         .candle-flame {
             width: 80px;
             height: 80px;
-            background: radial-gradient(circle, #ffd700 0%, #ff8c00 40%, transparent 70%);
+            background: radial-gradient(circle, var(--golden) 0%, var(--amber) 42%, transparent 72%);
             border-radius: 50%;
             margin: 0 auto 1rem;
             animation: flameFlicker 2s ease-in-out infinite;
@@ -295,7 +329,7 @@
             transform: translate(-50%, -50%);
             width: 40px;
             height: 40px;
-            background: radial-gradient(circle, #ffffff 0%, #ffd700 50%, transparent 70%);
+            background: radial-gradient(circle, var(--white) 0%, var(--golden) 52%, transparent 72%);
             border-radius: 50%;
             animation: innerFlame 2s ease-in-out infinite;
         }
@@ -332,11 +366,11 @@
         .about-constellation {
             max-width: 700px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(158, 166, 232, 0.10); /* periwinkle glass */
             backdrop-filter: blur(10px);
             padding: 3rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(235, 245, 255, 0.22);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             margin-bottom: 3rem;
         }
@@ -345,8 +379,8 @@
             font-size: 2rem;
             margin-bottom: 1.5rem;
             letter-spacing: 3px;
-            color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            color: var(--golden);
+            text-shadow: 0 0 20px rgba(255, 177, 74, 0.35);
         }
 
         .about-constellation p {
@@ -390,7 +424,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(135, 206, 250, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(159, 176, 241, 0.22) 0%, transparent 72%);
             pointer-events: none;
             z-index: 5;
             transition: all 0.1s ease;
