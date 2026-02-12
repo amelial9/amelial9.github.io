@@ -40,7 +40,8 @@
                 #7ba3cc 60%, 
                 #b8d4e8 80%, 
                 #e8f1f7 100%);
-            animation: skyShift 20s ease-in-out infinite;
+            /* Keep sky brightness stable (no shifting animation) */
+            animation: none;
             z-index: 0;
         }
 
@@ -68,8 +69,8 @@
         /* Floating clouds */
         .cloud {
             position: absolute;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.6); /* keep current transparency */
+            border-radius: 999px;
             filter: blur(20px);
             animation: floatCloud linear infinite;
             z-index: 1;
@@ -79,8 +80,23 @@
         .cloud::after {
             content: '';
             position: absolute;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.5); /* keep current transparency */
+            border-radius: 999px;
+        }
+
+        /* Make a more cloud-like silhouette */
+        .cloud::before {
+            width: 55%;
+            height: 140%;
+            left: 12%;
+            top: -70%;
+        }
+
+        .cloud::after {
+            width: 45%;
+            height: 120%;
+            right: 14%;
+            top: -60%;
         }
 
         .cloud-1 {
