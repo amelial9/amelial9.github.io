@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sky Portfolio</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --blue-deep: #222f57;
+    --blue-soft: #6f93d6;
+    --blue-lavender: #9fb0f1;
+    --peach: #ffd6cf;
+    --gold: #ffd27a;
+    --white-cool: rgba(235,245,255,.7);
+}
+
+body {
+    font-family: "Georgia", serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(
+        to bottom,
+        var(--blue-deep) 0%,
+        #2b3964 30%,
+        var(--blue-soft) 60%,
+        var(--blue-lavender) 85%,
+        var(--peach) 100%
+    );
+    color: white;
+}
+
+.sky-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ---------- STARS ---------- */
+.stars {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: var(--white-cool);
+    box-shadow: 0 0 12px rgba(235,245,255,.5);
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%,100% { opacity:.4; }
+    50% { opacity:1; }
+}
+
+/* ---------- AURORA ---------- */
+.aurora {
+    position: fixed;
+    width: 120%;
+    height: 50vh;
+    left: -10%;
+    top: 0;
+    z-index: 1;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    animation: auroraMove 14s ease-in-out infinite;
+}
+
+.aurora.one {
+    background: radial-gradient(circle at 30% 40%,
+        rgba(159,176,241,.4),
+        rgba(111,147,214,.25),
+        transparent 70%);
+}
+
+.aurora.two {
+    top: 8vh;
+    opacity: .6;
+    animation-duration: 20s;
+    background: radial-gradient(circle at 70% 40%,
+        rgba(255,214,207,.3),
+        rgba(159,176,241,.2),
+        transparent 70%);
+}
+
+@keyframes auroraMove {
+    0%,100% { transform: translateX(0); }
+    50% { transform: translateX(-5%); }
+}
+
+/* ---------- FOG ---------- */
+.fog {
+    position: fixed;
+    bottom: 0;
+    width: 120%;
+    height: 30vh;
+    left: -10%;
+    background: linear-gradient(to top,
+        rgba(235,245,255,.35),
+        transparent);
+    filter: blur(40px);
+    z-index: 2;
+    animation: fogDrift 25s linear infinite;
+}
+
+@keyframes fogDrift {
+    from { transform: translateX(0); }
+    to { transform: translateX(10%); }
+}
+
+/* ---------- HORIZON ---------- */
+.horizon {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to top,
+        rgba(20,25,50,.8),
+        transparent);
+    z-index: 3;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* ---------- PORTAL TITLE ---------- */
+.portal {
+    position: relative;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.portal::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(159,176,241,.4),
+        transparent 70%);
+    filter: blur(20px);
+    animation: portalPulse 4s ease-in-out infinite;
+}
+
+@keyframes portalPulse {
+    0%,100% { opacity:.5; }
+    50% { opacity:1; }
+}
+
+.portal h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    background: linear-gradient(to right,
+        white,
+        var(--blue-lavender),
+        var(--peach),
+        white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(235,245,255,.7);
+}
+
+.portal p {
+    letter-spacing: 3px;
+    opacity: .9;
+}
+
+/* ---------- NAV CANDLES ---------- */
+.nav {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.candle {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+.candle:hover { transform: translateY(-10px); }
+
+.flame {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: radial-gradient(circle,
+        var(--gold),
+        #ffb14a,
+        transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255,210,122,.7);
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+    max-width: 700px;
+    background: rgba(159,176,241,.12);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(235,245,255,.25);
+}
+
+.about h2 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+/* ---------- CONSTELLATION ---------- */
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+<div class="sky-container">
+
+<div class="stars" id="stars"></div>
+<div class="aurora one"></div>
+<div class="aurora two"></div>
+<div class="fog"></div>
+<div class="horizon"></div>
+<canvas id="constellation"></canvas>
+
+<div class="content">
+    <div class="portal">
+        <h1>Your Name</h1>
+        <p>Journey Through the Sky</p>
+    </div>
+
+    <div class="nav">
+        <a href="#about" class="candle">
+            <div class="flame"></div>
+            <div>About</div>
+        </a>
+        <a href="#work" class="candle">
+            <div class="flame"></div>
+            <div>Work</div>
+        </a>
+        <a href="#projects" class="candle">
+            <div class="flame"></div>
+            <div>Projects</div>
+        </a>
+        <a href="#contact" class="candle">
+            <div class="flame"></div>
+            <div>Contact</div>
+        </a>
+    </div>
+
+    <div class="about" id="about">
+        <h2>✦ About Me ✦</h2>
+        <p>
+            A traveler guided by light, curiosity, and creativity.
+            Each project is a constellation, each idea a spark in the sky.
+        </p>
+    </div>
+</div>
+</div>
+
+<script>
+/* STARS */
+const stars = document.getElementById("stars");
+for (let i = 0; i < 140; i++) {
+    const s = document.createElement("div");
+    s.className = "star";
+    s.style.left = Math.random()*100+"%";
+    s.style.top = Math.random()*100+"%";
+    s.style.animationDuration = (2+Math.random()*4)+"s";
+    stars.appendChild(s);
+}
+
+/* CONSTELLATION */
+const canvas = document.getElementById("constellation");
+const ctx = canvas.getContext("2d");
+let w,h,mouse={x:0,y:0};
+
+function resize(){
+    w=canvas.width=window.innerWidth;
+    h=canvas.height=window.innerHeight;
+}
+window.addEventListener("resize",resize);
+resize();
+
+document.addEventListener("mousemove",e=>{
+    mouse.x=e.clientX;
+    mouse.y=e.clientY;
+});
+
+let t = 0;
+
+function draw(){
+    ctx.clearRect(0,0,w,h);
+    t += 0.03;
+
+    document.querySelectorAll(".star").forEach(star=>{
+        const rect = star.getBoundingClientRect();
+        const sx = rect.left + rect.width / 2;
+        const sy = rect.top + rect.height / 2;
+
+        const dx = sx - mouse.x;
+        const dy = sy - mouse.y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+
+        if (d < 140) {
+            // blinking / breathing effect
+            const pulse = (Math.sin(t - d * 0.05) + 1) / 2;
+
+            ctx.strokeStyle = `rgba(235,245,255,${0.15 + pulse * 0.35})`;
+            ctx.lineWidth = 0.6 + pulse * 1.2;
+
+            ctx.beginPath();
+            ctx.moveTo(sx, sy);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+        }
+    });
+
+    requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+</body>
+</html>
