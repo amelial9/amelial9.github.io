@@ -15,6 +15,7 @@
     --peach: #ffd6cf;
     --gold: #ffd27a;
     --white-cool: rgba(235,245,255,.7);
+    --white-cool-soft: rgba(235,245,255,.52);
 }
 
 body {
@@ -115,6 +116,78 @@ body {
 @keyframes fogDrift {
     from { transform: translateX(0); }
     to { transform: translateX(10%); }
+}
+
+/* ---------- FLOATING CLOUDS ---------- */
+.cloud {
+    position: absolute;
+    background: var(--white-cool);
+    border-radius: 999px;
+    filter: blur(20px);
+    animation: floatCloud linear infinite;
+    z-index: 1;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: var(--white-cool-soft);
+    border-radius: 999px;
+}
+
+.cloud::before {
+    width: 55%;
+    height: 140%;
+    left: 12%;
+    top: -70%;
+}
+
+.cloud::after {
+    width: 45%;
+    height: 120%;
+    right: 14%;
+    top: -60%;
+}
+
+.cloud-1 {
+    width: 200px;
+    height: 60px;
+    top: 20%;
+    left: -200px;
+    animation-duration: 50s;
+}
+
+.cloud-2 {
+    width: 150px;
+    height: 50px;
+    top: 40%;
+    left: -150px;
+    animation-duration: 60s;
+    animation-delay: 5s;
+}
+
+.cloud-3 {
+    width: 180px;
+    height: 55px;
+    top: 60%;
+    left: -180px;
+    animation-duration: 55s;
+    animation-delay: 10s;
+}
+
+.cloud-4 {
+    width: 220px;
+    height: 70px;
+    top: 15%;
+    left: -220px;
+    animation-duration: 65s;
+    animation-delay: 15s;
+}
+
+@keyframes floatCloud {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(100vw + 300px)); }
 }
 
 /* ---------- HORIZON ---------- */
@@ -315,6 +388,10 @@ canvas {
 <div class="stars" id="stars"></div>
 <div class="aurora one"></div>
 <div class="aurora two"></div>
+<div class="cloud cloud-1"></div>
+<div class="cloud cloud-2"></div>
+<div class="cloud cloud-3"></div>
+<div class="cloud cloud-4"></div>
 <div class="fog"></div>
 <div class="horizon"></div>
 <canvas id="constellation"></canvas>
