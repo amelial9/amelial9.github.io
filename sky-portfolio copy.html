@@ -21,13 +21,14 @@ body {
     font-family: "Georgia", serif;
     min-height: 100vh;
     overflow-x: hidden;
+    /* Consistent mid-tone, subtle purple-dawn tint */
     background: linear-gradient(
         to bottom,
-        var(--blue-deep) 0%,
-        #2b3964 30%,
-        var(--blue-soft) 60%,
-        var(--blue-lavender) 85%,
-        var(--peach) 100%
+        #5e6b98 0%,
+        #6975ac 25%,
+        #6f7db5 50%,
+        #6975ac 75%,
+        #62699e 100%
     );
     color: white;
 }
@@ -76,18 +77,18 @@ body {
 
 .aurora.one {
     background: radial-gradient(circle at 30% 40%,
-        rgba(159,176,241,.4),
-        rgba(111,147,214,.25),
+        rgba(195,190,235,.28),
+        rgba(165,160,220,.18),
         transparent 70%);
 }
 
 .aurora.two {
     top: 8vh;
-    opacity: .6;
+    opacity: .55;
     animation-duration: 20s;
     background: radial-gradient(circle at 70% 40%,
-        rgba(255,214,207,.3),
-        rgba(159,176,241,.2),
+        rgba(200,198,238,.22),
+        rgba(172,168,225,.16),
         transparent 70%);
 }
 
@@ -104,7 +105,7 @@ body {
     height: 30vh;
     left: -10%;
     background: linear-gradient(to top,
-        rgba(235,245,255,.35),
+        rgba(210,208,242,.16),
         transparent);
     filter: blur(40px);
     z-index: 2;
@@ -123,7 +124,7 @@ body {
     width: 100%;
     height: 20vh;
     background: linear-gradient(to top,
-        rgba(20,25,50,.8),
+        rgba(88,90,138,.22),
         transparent);
     z-index: 3;
 }
@@ -229,10 +230,73 @@ body {
     border: 1px solid rgba(235,245,255,.25);
 }
 
-.about h2 {
+.about h2,
+.section h2 {
     color: var(--gold);
     margin-bottom: 1rem;
     letter-spacing: 3px;
+}
+
+.section {
+    max-width: 700px;
+    background: rgba(159,176,241,.12);
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(235,245,255,.25);
+    margin-bottom: 3rem;
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    list-style: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
+
+.section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(235,245,255,.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section li:last-child { border-bottom: none; }
+
+.section .tag {
+    font-size: 0.85rem;
+    color: var(--blue-lavender);
+    white-space: nowrap;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.contact-links a {
+    color: var(--peach);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255,214,207,.4);
+    border-radius: 12px;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.contact-links a:hover {
+    background: rgba(255,214,207,.15);
+    transform: translateY(-3px);
 }
 
 /* ---------- CONSTELLATION ---------- */
@@ -280,11 +344,75 @@ canvas {
         </a>
     </div>
 
-    <div class="about" id="about">
+    <div class="about section" id="about">
         <h2>✦ About Me ✦</h2>
         <p>
             A traveler guided by light, curiosity, and creativity.
             Each project is a constellation, each idea a spark in the sky.
+        </p>
+        <p>
+            I believe in building things that feel alive—interfaces that breathe, stories that connect,
+            and code that serves both people and the planet. My path has wound through design, development,
+            and discovery, always with an eye on the horizon and a hand reaching for the next star.
+        </p>
+        <p>
+            When I'm not crafting digital experiences, you might find me stargazing, sketching,
+            or wandering with a camera—finding patterns in the chaos and turning inspiration into reality.
+        </p>
+    </div>
+
+    <div class="section" id="work">
+        <h2>✦ Work & Experience ✦</h2>
+        <p>
+            I've had the chance to contribute to teams and products that aim high.
+            Here are some of the roles and milestones that have shaped my journey.
+        </p>
+        <ul>
+            <li><span>Senior Creative Developer</span><span class="tag">Present</span></li>
+            <li><span>UX Engineer · Product & Design Systems</span><span class="tag">2022 – 2024</span></li>
+            <li><span>Front-End Developer · E‑commerce & Marketing</span><span class="tag">2020 – 2022</span></li>
+            <li><span>Design & Dev Intern · Agency</span><span class="tag">2019 – 2020</span></li>
+        </ul>
+        <p>
+            Across these roles I've focused on responsive design, performance, accessibility,
+            and helping teams ship with clarity and care.
+        </p>
+    </div>
+
+    <div class="section" id="projects">
+        <h2>✦ Projects ✦</h2>
+        <p>
+            Side projects and experiments where I explore new tools, aesthetics, and ideas.
+            Each one is a small constellation of its own.
+        </p>
+        <ul>
+            <li><span>Sky Portfolio (this site)</span><span class="tag">Design · CSS · JS</span></li>
+            <li><span>Constellation Generator</span><span class="tag">Canvas · Animation</span></li>
+            <li><span>Minimal Blog Theme</span><span class="tag">Typography · Dark mode</span></li>
+            <li><span>Weather + Sky Color API</span><span class="tag">APIs · Data viz</span></li>
+            <li><span>Accessibility Audit Toolkit</span><span class="tag">A11y · Automation</span></li>
+        </ul>
+        <p>
+            I'm always tinkering with something new—reach out if you'd like to collaborate
+            or hear more about any of these.
+        </p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>✦ Contact ✦</h2>
+        <p>
+            Whether you have a project in mind, a question, or just want to say hello—
+            I'd love to hear from you. Let's connect under the same sky.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:hello@example.com">Email</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: .85;">
+            I typically reply within a few days. For urgent or time-sensitive requests,
+            please mention it in the subject line.
         </p>
     </div>
 </div>
