@@ -1,8 +1,17 @@
 import cursorLogo from '../../assets/logos/cursor.png';
 import ischoolLogo from '../../assets/logos/ischool.jpg';
 import goldenLabLogo from '../../assets/logos/goldenlab.png';
+import ibmLogo from '../../assets/logos/ibm.png';
 
 export const experiencesData = [
+  {
+    date: 'June 2026',
+    title: 'Software Developer Intern',
+    subtitle: 'IBM',
+    description: 'Incoming summer 2026',
+    skills: [],
+    logo: ibmLogo,
+  },
   {
     date: 'Aug. 2025 - Present',
     title: 'Campus Lead @ UW Seattle',
