@@ -1,7 +1,7 @@
 import cursorLogo from '../../assets/logos/cursor.png';
 import ischoolLogo from '../../assets/logos/ischool.jpg';
 import goldenLabLogo from '../../assets/logos/goldenlab.png';
-import ibmLogo from '../../assets/logos/ibm.png';
+import ibmLogo from '../../assets/logos/ibm.jpg';
 
 export const experiencesData = [
   {
