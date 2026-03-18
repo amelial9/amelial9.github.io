@@ -34,11 +34,11 @@ function Home() {
           <br></br>
           <div className="sec2">
             <h1>
-              Hi! 👋 I'm Amelia, <br></br> {' '}
+              Hi! 👋 I'm Amelia, <br></br> a{' '}
               <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
                 <Typewriter
-                  words={['a developer', 'a CS + INFO student', 'an organized planner', 'a community builder', 'a boba + coffee enthusiast']}
-                  loop
+                    words={['developer', 'CS + INFO student', 'community builder', 'boba + coffee enthusiast']}
+                    loop
                   cursor
                   cursorStyle="|"
                   typeSpeed={70}
