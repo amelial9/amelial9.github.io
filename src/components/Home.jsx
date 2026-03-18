@@ -37,7 +37,7 @@ function Home() {
               Hi! 👋 I'm Amelia, <br></br> a{' '}
               <span className="typing-span" style={{ color: 'black', fontWeight: 'bold' }}>
                 <Typewriter
-                    words={['developer', 'CS + INFO student', 'community builder', 'boba + coffee enthusiast']}
+                    words={['developer', 'CS + INFO student', 'community builder', 'boba + coffee lover']}
                     loop
                   cursor
                   cursorStyle="|"
