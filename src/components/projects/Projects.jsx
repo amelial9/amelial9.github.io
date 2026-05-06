@@ -66,7 +66,7 @@ function Projects() {
       </div>
       <ProjectCarousel 
         projects={prototypeProjects} 
-        title="Prototypes in the Wild"
+        title="Design Projects"
       />
     </div>
   );

@@ -14,6 +14,9 @@ const HomeResearch = () => {
             </a>
             , where I work on applying machine learning to classify behavior from physiological time-series data. My work focuses on how we can learn behavioral patterns from noisy real-world biological signals.
           </p>
+          <p className="research-focus-text research-focus-aim">
+            This research project aims to uncover relationships between physiological dynamics and behavioral states in freely moving animals, with applications in neuroscience and anesthetic state analysis.
+          </p>
         </div>
         <div className="research-pdf-container">
           <a 
@@ -22,14 +25,14 @@ const HomeResearch = () => {
             rel="noopener noreferrer" 
             className="pdf-subheader"
           >
-            Presentation: 2025 Undergraduate Research Symposium
+            Presentation: 2025 UW Undergraduate Research Symposium
           </a>
           <div className="pdf-wrapper">
             <div className="pdf-decorative-frame">
               <iframe
                 src={researchPdf}
                 className="research-pdf"
-                title="Undergrad Research Symposium 2025"
+                title="UW Undergraduate Research Symposium 2025"
               />
             </div>
           </div>

@@ -26,7 +26,15 @@
 
 .typing-span{
   display: inline-block;
-  min-width: 180px
+  min-width: 180px;
+  min-height: 2.6em;
+  vertical-align: top;
+}
+
+@media (min-width: 769px) {
+  .typing-span {
+    min-height: 1.2em;
+  }
 }
 
 @keyframes logo-spin {

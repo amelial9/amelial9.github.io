@@ -56,7 +56,7 @@ function Home() {
             </p>
             <br></br>
             <i style={{fontSize: '15px', color: '#473C35', display: 'block', textAlign: 'left', marginLeft: '30px'}}>
-             💾 Databases • ⚙️ AI Systems • 💭 Product Thinking • 🧋 Boba Dev Hours
+             ⚙️ Software Engineering • 👾 Machine Learning • 💭 Product Thinking • 🧋 Boba Dev Hours
             </i>
           </div>
         </div>
