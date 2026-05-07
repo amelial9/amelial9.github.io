@@ -25,15 +25,17 @@
 }
 
 .typing-span{
-  display: inline-block;
-  min-width: 180px;
+  display: block;
   min-height: 2.6em;
-  vertical-align: top;
+  text-align: left;
 }
 
 @media (min-width: 769px) {
   .typing-span {
+    display: inline-block;
+    min-width: 180px;
     min-height: 1.2em;
+    vertical-align: top;
   }
 }
 
