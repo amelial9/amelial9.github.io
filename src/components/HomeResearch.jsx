@@ -1,5 +1,7 @@
 import './HomeResearch.css';
 import researchPdf from '../assets/Undergrad Research Symposium 2025.pdf';
+import researchPdf2 from '../assets/Undergrad Research Symposium 2026.pdf';
+
 
 const HomeResearch = () => {
   return (
