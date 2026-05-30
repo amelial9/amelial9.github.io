@@ -22,17 +22,17 @@ const HomeResearch = () => {
         </div>
         <div className="research-pdf-container">
           <a 
-            href={researchPdf} 
+            href={researchPdf2} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="pdf-subheader"
           >
-            Presentation: 2025 UW Undergraduate Research Symposium
+            Presentation: 2026 UW Undergraduate Research Symposium
           </a>
           <div className="pdf-wrapper">
             <div className="pdf-decorative-frame">
               <iframe
-                src={researchPdf}
+                src={researchPdf2}
                 className="research-pdf"
                 title="UW Undergraduate Research Symposium 2025"
               />
