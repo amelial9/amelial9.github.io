@@ -23,7 +23,7 @@ function Home() {
           <div className="sec1">
             <img src={portraitPic} className="portrait" alt="Amelia notion portrait pic" />
             <p className="name">Xiang (Amelia) Li</p>
-            <p>CS + Info @ University of Washington</p>
+            <p>CS & Informatics @ University of Washington</p>
             <div className="icons">
               <IconLink href="https://www.linkedin.com/in/amelial9/" src={linkedin} alt="LinkedIn link" />
               <IconLink href="https://github.com/amelial9" src={github} alt="GitHub link" />
@@ -56,7 +56,7 @@ function Home() {
             </p>
             <br></br>
             <i style={{fontSize: '15px', color: '#473C35', display: 'block', textAlign: 'left', marginLeft: '30px'}}>
-             ⚙️ Software Engineering • 👾 Machine Learning • 💭 Product Thinking • 🧋 Boba Dev Hours
+             ⚙️ Software Engineering • 💭 Product Thinking • 🧋 Boba Dev Hours
             </i>
           </div>
         </div>
@@ -73,13 +73,9 @@ function Home() {
         <br></br>
         <br></br>
 
-        <section id="research">
+        {/* <section id="research">
           <HomeResearch />
-        </section>
-
-        <br></br>
-        <br></br>
-        <br></br>
+        </section> */}
 
         <section id="projects">
           <Projects />

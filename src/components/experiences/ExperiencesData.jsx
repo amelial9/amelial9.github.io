@@ -5,23 +5,15 @@ import ibmLogo from '../../assets/logos/ibm.jpg';
 
 export const experiencesData = [
   {
-    date: 'June 2026',
+    date: 'June 2026 - Present',
     title: 'Software Developer Intern',
     subtitle: 'IBM',
-    description: 'Incoming summer 2026',
-    skills: [],
+    description: 'watsonx.ai QA automation',
+    skills: ['Test Automation', 'Typescript', 'QA Engineering', 'watsonx.ai'],
     logo: ibmLogo,
   },
   {
-    date: 'Aug. 2025 - Present',
-    title: 'Campus Lead @ UW Seattle',
-    subtitle: 'Cursor',
-    description: '💻 grow Cursor’s presence on campus',
-    skills: ['Community Engagement', 'Project Management', 'Event Planning'],
-    logo: cursorLogo,
-  },
-  {
-    date: 'Mar. 2025 - Present',
+    date: 'Mar. 2025 - Jun. 2026',
     title: 'Teaching Assistant',
     subtitle: 'University of Washington Information School',
     description: 'teach SQL and database design',
@@ -33,8 +25,16 @@ export const experiencesData = [
     title: 'Research Assistant',
     subtitle: 'Golden Lab, Department of Neurobiology and Biophysics, University of Washington',
     description: '🐁 research mouse behavior',
-    skills: ['Python', 'Machine Learning', 'Data Visualization'],
+    skills: ['Python', 'Behavioral Data Analysis', 'Machine Learning'],
     logo: goldenLabLogo,
+  },
+  {
+    date: 'Aug. 2025 - Jun. 2026',
+    title: 'Campus Lead @ UW Seattle',
+    subtitle: 'Cursor',
+    description: '💻 grow Cursor’s presence on campus',
+    skills: ['Community Engagement', 'Project Management', 'Event Coordination'],
+    logo: cursorLogo,
   }
 ];
 
@@ -42,7 +42,7 @@ export const educationData = [
   {
     date: 'Sep. 2023 – Jun. 2027 (Expected)',
     title: 'University of Washington, Seattle',
-    subtitle: 'B.S., CS + Informatics',
+    subtitle: 'B.S., CS, B.S., Informatics',
     description: 'Relevant courses: Data Structures and Algorithms, Databases and Data Modeling, Client-Side & Server-Side Development, Mobile Development: IOS, Machine Learning, Linear Algebra, Foundations of Computing, The Hardware/Software Interface, and more.',
     skills: [],
   }
