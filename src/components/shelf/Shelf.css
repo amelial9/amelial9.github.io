@@ -1,0 +1,159 @@
+/* Shelf: color tokens (soft pastels tuned to the site's cream/brown palette) */
+.shelf-section {
+  --shelf-ink: #473C35;
+  --shelf-cream: #FFF7E3;
+  --shelf-butter: #F5E6A8;
+  --shelf-peach: #F8D2B8;
+  --shelf-blush: #F6CDD3;
+  --shelf-lavender: #D9D3F0;
+  --shelf-sky: #CFE3F3;
+  --shelf-mint: #CDEBDD;
+  --shelf-sage: #D6DEC2;
+  --shelf-taupe: #C7BDB5;
+  --shelf-cocoa: #6B5B4F;
+
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.shelf-section .section-title-wrapper {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.shelf-section .section-title {
+  color: var(--shelf-ink);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.shelf-section .section-title::after {
+  display: none !important;
+  content: none !important;
+}
+
+.shelf-row {
+  margin-bottom: 3rem;
+}
+
+.shelf-label {
+  color: var(--shelf-ink);
+  font-size: 1rem;
+  text-align: left;
+  margin: 0 0 1rem 0.5rem;
+  opacity: 0.8;
+}
+
+.shelf-items {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.25rem 1rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.shelf-items::-webkit-scrollbar {
+  display: none;
+}
+
+/* ledge under each row */
+.shelf-ledge {
+  height: 10px;
+  border-radius: 5px;
+  background: #E8DFD0;
+  box-shadow: 0 4px 6px rgba(71, 60, 53, 0.12);
+}
+
+/* covers */
+.cover {
+  --cover-w: 124px;
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--cover-w);
+  display: flex;
+  flex-direction: column;
+  background: var(--cover-bg);
+  color: var(--cover-ink, var(--shelf-ink));
+  border: 1.5px solid rgba(71, 60, 53, 0.18);
+  border-radius: 4px 10px 10px 4px;
+  /* left "binding" edge + soft drop shadow */
+  box-shadow:
+    inset 5px 0 0 rgba(71, 60, 53, 0.08),
+    inset 6px 0 0 rgba(255, 255, 255, 0.4),
+    0 3px 6px rgba(71, 60, 53, 0.14);
+  overflow: hidden;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+}
+
+.shelf-row-show .cover { --cover-w: 144px; height: 214px; }
+.shelf-row-movie .cover { --cover-w: 130px; height: 192px; }
+
+.cover:hover,
+.cover:focus-visible {
+  transform: translateY(-8px) rotate(-2deg);
+  box-shadow:
+    inset 5px 0 0 rgba(71, 60, 53, 0.08),
+    inset 6px 0 0 rgba(255, 255, 255, 0.4),
+    0 10px 16px rgba(71, 60, 53, 0.2);
+  z-index: 2;
+}
+
+.cover-title {
+  flex: 0 0 auto;
+  padding: 7px 8px 0 12px;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-height: 2.4em; /* 2 lines; padding-bottom is 0 so nothing peeks through */
+  text-align: left;
+  letter-spacing: 0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cover-art {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0 8px 8px 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(71, 60, 53, 0.12);
+}
+
+.cover-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cover-art-blank {
+  width: 100%;
+  height: 100%;
+}
+
+/* color variants */
+.cover-cream    { --cover-bg: var(--shelf-cream); }
+.cover-butter   { --cover-bg: var(--shelf-butter); }
+.cover-peach    { --cover-bg: var(--shelf-peach); }
+.cover-blush    { --cover-bg: var(--shelf-blush); }
+.cover-lavender { --cover-bg: var(--shelf-lavender); }
+.cover-sky      { --cover-bg: var(--shelf-sky); }
+.cover-mint     { --cover-bg: var(--shelf-mint); }
+.cover-sage     { --cover-bg: var(--shelf-sage); }
+.cover-taupe    { --cover-bg: var(--shelf-taupe); }
+.cover-cocoa    { --cover-bg: var(--shelf-cocoa); --cover-ink: #FFF7E3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cover { transition: none; }
+}

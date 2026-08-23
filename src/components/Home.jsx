@@ -6,6 +6,7 @@ import Experiences from './experiences/Experiences'
 import VerticalNav from './VerticalNav'
 import Projects from './projects/Projects'
 import HomeResearch from './HomeResearch'
+import Shelf from './shelf/Shelf'
 
 import portraitPic from '../assets/portrait.svg'
 import linkedin from '../assets/linkedin.svg'
@@ -83,6 +84,11 @@ function Home() {
 
         <br></br>
         <br></br>
+
+        <section id="shelf">
+          <Shelf />
+        </section>
+
         <br></br>
         <br></br>
         <br></br>
