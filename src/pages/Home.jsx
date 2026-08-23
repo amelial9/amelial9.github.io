@@ -1,16 +1,15 @@
 import { Typewriter } from 'react-simple-typewriter';
 import '../App.css'
 
-import IconLink from './IconLink'
-import Experiences from './experiences/Experiences'
-import VerticalNav from './VerticalNav'
-import Projects from './projects/Projects'
-import HomeResearch from './HomeResearch'
+import IconLink from '../components/IconLink'
+import Experiences from '../sections/experiences/Experiences'
+import VerticalNav from '../components/VerticalNav'
+import Projects from '../sections/projects/Projects'
 
-import portraitPic from '../assets/portrait.svg'
-import linkedin from '../assets/linkedin.svg'
-import github from '../assets/github.svg'
-import email from '../assets/email.svg'
+import portraitPic from '../assets/icons/portrait.svg'
+import linkedin from '../assets/icons/linkedin.svg'
+import github from '../assets/icons/github.svg'
+import email from '../assets/icons/email.svg'
 
 function Home() {
   return (

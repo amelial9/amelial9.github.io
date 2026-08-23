@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './VerticalNav.css';
-import portraitPic from '../assets/portrait.svg';
+import portraitPic from '../assets/icons/portrait.svg';
 
 const VerticalNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

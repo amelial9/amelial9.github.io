@@ -1,26 +1,26 @@
 import './Shelf.css';
-import friends from '../../assets/stuff/friends.jpeg';
-import graysAnatomy from '../../assets/stuff/graysanatomy.jpg';
-import himym from '../../assets/stuff/howimetyourmother.jpg';
-import loki from '../../assets/stuff/loki.jpg';
-import siliconValley from '../../assets/stuff/siliconvalley.jpg';
-import missionImpossible4 from '../../assets/stuff/missionimpossible4.jpg';
-import topGun2 from '../../assets/stuff/topgun2.jpeg';
+import friends from '../../assets/shelf/friends.jpeg';
+import graysAnatomy from '../../assets/shelf/graysanatomy.jpg';
+import himym from '../../assets/shelf/howimetyourmother.jpg';
+import loki from '../../assets/shelf/loki.jpg';
+import siliconValley from '../../assets/shelf/siliconvalley.jpg';
+import missionImpossible4 from '../../assets/shelf/missionimpossible4.jpg';
+import topGun2 from '../../assets/shelf/topgun2.jpeg';
 
 export const showsLabel = "Shows I've spent the most time on";
 export const moviesLabel = 'Movies I rewatch too much';
 
 export const shows = [
-  { title: 'How I Met Your Mother', color: 'peach', poster: himym },
-  { title: 'Loki', color: 'sage', poster: loki },
-  { title: "Grey's Anatomy", color: 'sky', poster: graysAnatomy },
-  { title: 'Friends', color: 'butter', poster: friends },
-  { title: 'Silicon Valley', color: 'mint', poster: siliconValley },
+  { title: 'How I Met Your Mother', color: 'sand', poster: himym },
+  { title: 'Loki', color: 'mocha', poster: loki },
+  { title: "Grey's Anatomy", color: 'fog', poster: graysAnatomy },
+  { title: 'Friends', color: 'taupe', poster: friends },
+  { title: 'Silicon Valley', color: 'cream', poster: siliconValley },
 ];
 
 export const movies = [
-  { title: 'Top Gun: Maverick', color: 'lavender', poster: topGun2 },
-  { title: 'Mission: Impossible – Ghost Protocol', color: 'blush', poster: missionImpossible4 },
+  { title: 'Top Gun: Maverick', color: 'oat', poster: topGun2 },
+  { title: 'Mission: Impossible – Ghost Protocol', color: 'cocoa', poster: missionImpossible4 },
 ];
 
 

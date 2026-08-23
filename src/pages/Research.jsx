@@ -1,8 +1,8 @@
 import React from 'react';
-import VerticalNav from './VerticalNav';
+import VerticalNav from '../components/VerticalNav';
 import './Research.css';
-import catsPhone from '../assets/cats_phone.jpg';
-import catsDesktop from '../assets/cats_desktop.jpg';
+import catsPhone from '../assets/research/cats_phone.jpg';
+import catsDesktop from '../assets/research/cats_desktop.jpg';
 
 const Research = () => {
   return (

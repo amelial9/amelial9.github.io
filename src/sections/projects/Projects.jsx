@@ -1,7 +1,7 @@
 import './Projects.css';
 import { developmentProjects, prototypeProjects } from './ProjectData';
-import githubIcon from '../../assets/githublink.svg';
-import linkIcon from '../../assets/link.svg';
+import githubIcon from '../../assets/icons/githublink.svg';
+import linkIcon from '../../assets/icons/link.svg';
 
 function ProjectLinks({ project }) {
   return (

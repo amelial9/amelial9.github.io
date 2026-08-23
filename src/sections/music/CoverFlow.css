@@ -1,0 +1,92 @@
+.cf-section {
+  --ink: #473C35;
+  --cream: #FFF7E3;
+  --now: #F0DEBA;
+
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cf-section .section-title-wrapper { text-align: left; margin-bottom: 2rem; }
+/* matches the homepage "Experience" title: left-aligned + short underline */
+.cf-section .section-title {
+  color: var(--ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.cf-section .section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--ink);
+}
+
+/* ── scroller (mobile first) ── */
+.cf-track {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  /* leading/trailing space so the first & last card can sit dead-center */
+  padding: 30px calc(50% - var(--card-half, 78px));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  perspective: 900px;
+  scrollbar-width: none;
+  --card-half: 78px;
+}
+.cf-track::-webkit-scrollbar { display: none; }
+
+.cf-card {
+  flex: 0 0 auto;
+  width: 156px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  scroll-snap-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cf-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 156px;
+  height: 156px;
+  border-radius: 16px;
+  background: var(--accent);
+  border: 2.5px solid var(--ink);
+  box-shadow: 0 8px 16px rgba(71, 60, 53, 0.16);
+  overflow: hidden;
+}
+.cf-art img { width: 100%; height: 100%; object-fit: cover; }
+.cf-note { font-size: 3rem; color: var(--ink); opacity: 0.55; }
+
+.cf-card.is-center .cf-art {
+  box-shadow: 0 14px 26px color-mix(in srgb, var(--now) 60%, rgba(71,60,53,0.2));
+}
+
+.cf-meta { text-align: center; margin-top: 18px; min-height: 3.2em; }
+.cf-title { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+.cf-artist { font-size: 0.9rem; color: var(--ink); opacity: 0.6; margin-top: 2px; }
+
+@media (min-width: 600px) {
+  .cf-section .section-title { font-size: 1.8rem; }
+  .cf-track { --card-half: 100px; gap: 26px; }
+  .cf-card { width: 200px; }
+  .cf-art { width: 200px; height: 200px; border-radius: 20px; }
+  .cf-note { font-size: 4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-card { transition: none; }
+}

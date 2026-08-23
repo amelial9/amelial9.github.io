@@ -2,15 +2,14 @@
 .shelf-section {
   --shelf-ink: #473C35;
   --shelf-cream: #FFF7E3;
-  --shelf-butter: #F5E6A8;
-  --shelf-peach: #F8D2B8;
-  --shelf-blush: #F6CDD3;
-  --shelf-lavender: #D9D3F0;
-  --shelf-sky: #CFE3F3;
-  --shelf-mint: #CDEBDD;
-  --shelf-sage: #D6DEC2;
+  --shelf-sand: #F0DEBA;
+  --shelf-oat: #E8DFD0;
+  --shelf-stone: #D7D3BF;
   --shelf-taupe: #C7BDB5;
-  --shelf-cocoa: #6B5B4F;
+  --shelf-fog: #F0F0F0;
+  --shelf-ash: #E0E0E0;
+  --shelf-mocha: #75655A;
+  --shelf-cocoa: #524740;
 
   padding: 1rem;
   max-width: 900px;
@@ -18,21 +17,34 @@
 }
 
 .shelf-section .section-title-wrapper {
-  text-align: center;
-  margin-bottom: 2.5rem;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
+/* matches the homepage "Experience" title: left-aligned + short underline */
 .shelf-section .section-title {
   color: var(--shelf-ink);
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin: 0;
-  letter-spacing: -0.02em;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
 .shelf-section .section-title::after {
-  display: none !important;
-  content: none !important;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--shelf-ink);
+}
+
+@media (min-width: 768px) {
+  .shelf-section .section-title { font-size: 1.8rem; }
 }
 
 .shelf-row {
@@ -142,17 +154,16 @@
   height: 100%;
 }
 
-/* color variants */
-.cover-cream    { --cover-bg: var(--shelf-cream); }
-.cover-butter   { --cover-bg: var(--shelf-butter); }
-.cover-peach    { --cover-bg: var(--shelf-peach); }
-.cover-blush    { --cover-bg: var(--shelf-blush); }
-.cover-lavender { --cover-bg: var(--shelf-lavender); }
-.cover-sky      { --cover-bg: var(--shelf-sky); }
-.cover-mint     { --cover-bg: var(--shelf-mint); }
-.cover-sage     { --cover-bg: var(--shelf-sage); }
-.cover-taupe    { --cover-bg: var(--shelf-taupe); }
-.cover-cocoa    { --cover-bg: var(--shelf-cocoa); --cover-ink: #FFF7E3; }
+/* color variants (warm, tonal — matches the homepage's brown/cream palette) */
+.cover-cream  { --cover-bg: var(--shelf-cream); }
+.cover-sand   { --cover-bg: var(--shelf-sand); }
+.cover-oat    { --cover-bg: var(--shelf-oat); }
+.cover-stone  { --cover-bg: var(--shelf-stone); }
+.cover-taupe  { --cover-bg: var(--shelf-taupe); }
+.cover-fog    { --cover-bg: var(--shelf-fog); }
+.cover-ash    { --cover-bg: var(--shelf-ash); }
+.cover-mocha  { --cover-bg: var(--shelf-mocha); --cover-ink: #FFF7E3; }
+.cover-cocoa  { --cover-bg: var(--shelf-cocoa); --cover-ink: #FFF7E3; }
 
 @media (prefers-reduced-motion: reduce) {
   .cover { transition: none; }
