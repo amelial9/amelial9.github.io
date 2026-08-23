@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './VerticalNav.css';
 import portraitPic from '../assets/portrait.svg';
 
@@ -61,7 +62,8 @@ const VerticalNav = () => {
       </div>
 
       <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
-        {/* <Link to="/research" className="nav-link" onClick={() => setIsMenuOpen(false)}>Research</Link> */}
+        <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+        <Link to="/fun" className="nav-link" onClick={() => setIsMenuOpen(false)}>Fun !</Link>
         <a href="https://notes.ameliali.com/" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>Notes</a>
         <a href="https://linktr.ee/amelial9" target="_blank" className="nav-link" onClick={() => setIsMenuOpen(false)}>LINKTR.EE</a>
       </div>
