@@ -168,3 +168,134 @@
 @media (prefers-reduced-motion: reduce) {
   .cover { transition: none; }
 }
+
+/* ============================================================
+   GAMES — each game as a small horizontal handheld
+   ============================================================ */
+.games-block { margin-bottom: 3rem; }
+
+.games-label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--shelf-ink);
+  font-size: 1rem;
+  text-align: left;
+  margin: 0 0 1.5rem 0.5rem;
+  opacity: 0.85;
+}
+.games-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  fill: var(--shelf-ink);
+  shape-rendering: crispEdges;
+}
+
+/* mobile-first: devices are a fixed size and simply wrap — one per row on a
+   phone, more per row as the viewport widens. No breakpoints needed. */
+.consoles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 20px;
+}
+
+.gb-unit {
+  flex: 0 0 208px;
+  max-width: 208px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+/* ── horizontal handheld ── */
+.gb {
+  --gb-ink: #473C35;
+  --gb-bezel: #6f6357;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 20px 14px;
+  box-sizing: border-box;
+  background: var(--gb-body, #E7DCC5);
+  border: 2px solid var(--gb-ink);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 5px 12px rgba(71, 60, 53, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+.gb:hover,
+.gb:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 10px 18px rgba(71, 60, 53, 0.26);
+}
+
+/* left: LED + d-pad */
+.gb-left { display: flex; flex-direction: column; align-items: center; gap: 7px; flex: 0 0 auto; }
+.gb-led { width: 6px; height: 6px; border-radius: 50%; background: #e0574a; box-shadow: 0 0 4px rgba(224, 87, 74, 0.8); }
+.gb-dpad { position: relative; width: 30px; height: 30px; }
+.gb-dpad::before,
+.gb-dpad::after { content: ''; position: absolute; background: #3a322c; border-radius: 2.5px; }
+.gb-dpad::before { left: 11px; top: 0; width: 8px; height: 30px; }
+.gb-dpad::after { top: 11px; left: 0; height: 8px; width: 30px; }
+
+/* center: the app-icon screen */
+.gb-screen {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  background: var(--gb-bezel);
+  padding: 6px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.gb-iconwrap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;         /* app-icon rounding — clips baked-in white corners */
+  overflow: hidden;
+  background: var(--icon-bg, #20242c);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.gb-icon { width: 100%; height: 100%; display: block; }
+.gb-icon.fit-cover { object-fit: cover; transform: scale(1.06); }   /* eat the white corners */
+.gb-icon.fit-contain { object-fit: contain; padding: 9%; box-sizing: border-box; }
+
+/* right: A/B buttons + speaker */
+.gb-right { display: flex; flex-direction: column; align-items: center; gap: 9px; flex: 0 0 auto; }
+.gb-ab { display: flex; align-items: center; gap: 8px; }
+.gb-btn {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #C05A2C;
+  color: #fff2e6;
+  display: grid; place-items: center;
+  font-size: 0.5rem; font-weight: 800;
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.28), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.gb-speaker { display: flex; gap: 3px; }
+.gb-speaker i { width: 2.5px; height: 13px; border-radius: 2px; background: rgba(71, 60, 53, 0.28); }
+
+.gb-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--shelf-ink);
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gb { transition: none; }
+}

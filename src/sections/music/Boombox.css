@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 .bb2-section {
-  --ink: #473C35;
-  --cream: #FFF7E3;
-  --body: #E8DFD0;   /* oat — was sky blue */
-  --screen: #74645A;   /* a touch lighter than mocha (#6B5B4F) */
-  --now: #D7D3BF;    /* idle glow: stone */
+  /* ── Teenage Engineering layout · warm palette ── */
+  --ink: #3A2E24;          /* dark coffee hardware / borders */
+  --cream: #F3EADA;        /* warm bone: button faces, speaker base */
+  --body: #E3D7C0;         /* warm tan chassis */
+  --screen: #D8CBAF;       /* warm oat LCD */
+  --screentext: #2E241B;   /* espresso text on the LCD */
+  --muted: #7C6E58;        /* warm taupe secondary text */
+  --pop: #C05A2C;          /* terracotta accent */
+  --mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   padding: 1rem;
   max-width: 900px;
@@ -42,11 +48,11 @@
 }
 
 .bb2-handle {
-  width: 120px;
-  height: 34px;
+  width: 92px;
+  height: 30px;
   border: 6px solid var(--ink);
   border-bottom: none;
-  border-radius: 60px 60px 0 0;
+  border-radius: 8px 8px 0 0;
   margin-bottom: -8px;
   box-sizing: border-box;
 }
@@ -55,10 +61,10 @@
   width: 100%;
   background: var(--body);
   border: 3px solid var(--ink);
-  border-radius: 22px;
+  border-radius: 10px;
   padding: 14px;
   box-sizing: border-box;
-  box-shadow: 0 12px 22px color-mix(in srgb, var(--now) 50%, transparent);
+  box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.45);
   transition: box-shadow 0.4s ease;
 }
 
@@ -66,9 +72,10 @@
 .bb2-screen {
   background: var(--screen);
   border: 2.5px solid var(--ink);
-  border-radius: 12px;
+  border-radius: 7px;
   padding: 10px;
-  color: var(--cream);
+  color: var(--screentext);
+  font-family: var(--mono);
   /* mobile-first: album art on top, list below */
   display: flex;
   flex-direction: column;
@@ -83,10 +90,10 @@
   max-width: 240px;
   margin: 0 auto;
   aspect-ratio: 1 / 1;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  background: rgba(255, 247, 227, 0.05);
-  box-shadow: inset 0 0 0 1px rgba(255, 247, 227, 0.12);
+  background: color-mix(in srgb, var(--screentext) 6%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--screentext) 14%, transparent);
 }
 .bb2-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .bb2-art-empty { display: block; width: 100%; height: 100%; }
@@ -95,25 +102,25 @@
   align-items: center;
   gap: 10px;
   padding: 2px 4px 8px;
-  border-bottom: 1px solid rgba(255, 247, 227, 0.18);
+  border-bottom: 1px solid color-mix(in srgb, var(--screentext) 22%, transparent);
   margin-bottom: 6px;
 }
 .bb2-nowtext { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
 .bb2-nowtext strong {
   font-size: 0.86rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.bb2-nowtext em { font-size: 0.72rem; font-style: normal; opacity: 0.7; }
-.bb2-idle { opacity: 0.55; font-weight: 500; }
+.bb2-nowtext em { font-size: 0.72rem; font-style: normal; color: var(--muted); }
+.bb2-idle { color: var(--muted); font-weight: 500; }
 
 .bb2-list {
   list-style: none; margin: 0; padding: 0;
   max-height: 168px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,247,227,0.4) transparent;
+  scrollbar-color: color-mix(in srgb, var(--screentext) 40%, transparent) transparent;
 }
 .bb2-list::-webkit-scrollbar { width: 6px; }
-.bb2-list::-webkit-scrollbar-thumb { background: rgba(255,247,227,0.35); border-radius: 3px; }
+.bb2-list::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--screentext) 35%, transparent); border-radius: 3px; }
 
 .bb2-row {
   width: 100%;
@@ -123,22 +130,22 @@
   padding: 8px 6px;
   background: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   text-align: left;
-  color: var(--cream);
-  font-family: Arial, sans-serif;
+  color: var(--screentext);
+  font-family: var(--mono);
   transition: background 0.18s ease;
 }
-.bb2-row:hover { background: rgba(255, 247, 227, 0.1); }
-.bb2-row.is-active { background: color-mix(in srgb, var(--accent) 34%, transparent); }
+.bb2-row:hover { background: color-mix(in srgb, var(--screentext) 8%, transparent); }
+.bb2-row.is-active { background: color-mix(in srgb, var(--pop) 22%, transparent); }
 .bb2-row-icon { flex: 0 0 20px; display: flex; align-items: center; justify-content: center; }
-.bb2-num { font-size: 0.8rem; opacity: 0.55; }
+.bb2-num { font-size: 0.8rem; color: var(--muted); }
 .bb2-row-meta { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
 .bb2-row-title {
-  font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 0.9rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.bb2-row-artist { font-size: 0.74rem; opacity: 0.65; }
+.bb2-row-artist { font-size: 0.74rem; color: var(--muted); }
 
 /* ── panel ── */
 .bb2-panel {
@@ -151,7 +158,7 @@
 .bb2-speaker {
   flex: 0 0 auto;
   width: 46px; height: 46px;
-  border-radius: 50%;
+  border-radius: 6px;
   background:
     radial-gradient(circle at center, var(--ink) 0 5px, transparent 6px),
     radial-gradient(circle at center, transparent 0 13px, var(--ink) 13px 15px, transparent 16px),
@@ -172,7 +179,7 @@
 
 .ctrl {
   width: 40px; height: 40px;
-  border-radius: 50%;
+  border-radius: 8px;
   border: 2.5px solid var(--ink);
   background: var(--cream);
   color: var(--ink);
@@ -181,7 +188,7 @@
   padding: 0;
   transition: transform 0.15s ease, background 0.15s ease;
 }
-.ctrl-main { width: 50px; height: 50px; background: var(--now); }
+.ctrl-main { width: 50px; height: 50px; background: var(--pop); color: #fff; }
 .ctrl:not(:disabled):hover { transform: translateY(-2px); }
 .ctrl:not(:disabled):active { transform: translateY(0) scale(0.94); }
 .ctrl:disabled { cursor: default; }
@@ -191,14 +198,14 @@
 /* ── equalizer ── */
 .eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 15px; }
 .eq span {
-  width: 3px; height: 100%; border-radius: 2px; background: var(--now);
+  width: 3px; height: 100%; border-radius: 2px; background: var(--pop);
   transform-origin: bottom; transform: scaleY(0.3);
 }
 .eq.eq-on span { animation: eq-bounce 0.9s ease-in-out infinite; }
 .eq.eq-on span:nth-child(2) { animation-delay: 0.25s; }
 .eq.eq-on span:nth-child(3) { animation-delay: 0.5s; }
 .eq.eq-on span:nth-child(4) { animation-delay: 0.15s; }
-.bb2-row .eq span { background: var(--cream); }
+.bb2-row .eq span { background: var(--pop); }
 
 @keyframes eq-bounce {
   0%, 100% { transform: scaleY(0.3); }
