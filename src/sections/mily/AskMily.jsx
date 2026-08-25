@@ -6,11 +6,12 @@ import './AskMily.css';
 // and streams back the answer text.
 const SPACE = 'amelial9/milybot';
 
+// Keep these in sync with the `examples` list in the milybot Space's app.py.
 const SUGGESTIONS = [
   'Who is Amelia?',
-  'Tell me about noteql',
-  'What did she do at IBM?',
-  'Any fun facts?',
+  'Where did Amelia work at?',
+  'Any fun facts about Amelia?',
+  "What are some of Amelia's favorite TV shows?",
 ];
 
 function AskMily() {
