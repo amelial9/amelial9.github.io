@@ -44,15 +44,28 @@ function AskMily() {
     try {
       const client = await getClient();
       const submission = client.submit('/respond', { message: q });
+      let got = '';
       for await (const ev of submission) {
         if (ev.type === 'data') {
           const ans = Array.isArray(ev.data) ? ev.data[0] : ev.data;
+          got = String(ans ?? '');
           setMessages((m) => {
             const copy = [...m];
-            copy[copy.length - 1] = { role: 'mily', text: String(ans ?? '') };
+            copy[copy.length - 1] = { role: 'mily', text: got };
             return copy;
           });
         }
+      }
+      // stream ended but nothing came back (backend error / aborted GPU task)
+      if (!got.trim()) {
+        setMessages((m) => {
+          const copy = [...m];
+          copy[copy.length - 1] = {
+            role: 'mily',
+            text: "hmm, i couldn't come up with a reply just then — mind trying again?",
+          };
+          return copy;
+        });
       }
     } catch (e) {
       setMessages((m) => {
