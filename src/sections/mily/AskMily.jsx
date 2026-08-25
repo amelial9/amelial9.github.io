@@ -94,7 +94,7 @@ function AskMily() {
         <h2 className="section-title">Ask Mily</h2>
       </div>
       <p className="mily-sub">
-        my little AI assistant 🤖 — ask her about my work, projects, or what i'm into.
+        my little AI assistant; ask Mily about my work, projects, or what I'm into.
       </p>
 
       <div className="mily-window">
