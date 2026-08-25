@@ -1,0 +1,198 @@
+/* Ask Mily — greige/tan palette tuned to the Shelf consoles (lighter, less yellow) */
+.mily-section {
+  --mily-ink: #473C35;
+  --mily-paper: #F5F2EB;   /* card background — soft warm off-white */
+  --mily-tan: #E7DCC5;     /* Mily bubble — the console tan */
+  --mily-oat: #EDE7DB;     /* hover / scrollbar */
+  --mily-mocha: #75655A;   /* visitor bubble */
+  --mily-cream: #FFF7E3;   /* text on the mocha bubble */
+  --mily-line: rgba(71, 60, 53, 0.15);
+
+  /* match the Shelf section so the title lines up with the others */
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.mily-section .section-title-wrapper {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+/* matches the Shelf/homepage title: left-aligned + short underline */
+.mily-section .section-title {
+  color: var(--mily-ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.mily-section .section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--mily-ink);
+}
+
+@media (min-width: 768px) {
+  .mily-section .section-title { font-size: 1.8rem; }
+}
+
+.mily-sub {
+  color: var(--mily-ink);
+  opacity: 0.8;
+  text-align: left;
+  margin: 0 0 1.25rem 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* the chat "card" — fills the section width, matching the Shelf footprint */
+.mily-window {
+  background: var(--mily-paper);
+  border: 1.5px solid var(--mily-line);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(71, 60, 53, 0.1);
+  padding: 1rem;
+}
+
+.mily-chat {
+  height: 340px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.25rem 0.25rem 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--mily-oat) transparent;
+}
+.mily-chat::-webkit-scrollbar { width: 8px; }
+.mily-chat::-webkit-scrollbar-thumb {
+  background: var(--mily-oat);
+  border-radius: 4px;
+}
+
+.mily-empty {
+  margin: auto;
+  color: var(--mily-mocha);
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mily-msg {
+  max-width: 82%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* visitor bubble — mocha, right aligned */
+.mily-msg-user {
+  align-self: flex-end;
+  background: var(--mily-mocha);
+  color: var(--mily-cream);
+  border-bottom-right-radius: 4px;
+}
+
+/* Mily bubble — tan, left aligned */
+.mily-msg-mily {
+  align-self: flex-start;
+  background: var(--mily-tan);
+  color: var(--mily-ink);
+  border: 1px solid var(--mily-line);
+  border-bottom-left-radius: 4px;
+}
+
+/* typing dots */
+.mily-typing {
+  display: inline-flex;
+  gap: 4px;
+  padding: 2px 0;
+}
+.mily-typing i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mily-mocha);
+  opacity: 0.6;
+  animation: mily-bounce 1.2s infinite ease-in-out;
+}
+.mily-typing i:nth-child(2) { animation-delay: 0.2s; }
+.mily-typing i:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes mily-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-4px); opacity: 0.9; }
+}
+
+/* suggestion chips */
+.mily-suggests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.mily-chip {
+  background: transparent;
+  color: var(--mily-ink);
+  border: 1.5px solid var(--mily-line);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.82rem;
+  font-family: inherit;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.mily-chip:hover:not(:disabled) {
+  background: var(--mily-oat);
+  transform: translateY(-1px);
+}
+.mily-chip:disabled { opacity: 0.5; }
+
+/* input row */
+.mily-input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.mily-input {
+  flex: 1;
+  background: #fff;
+  color: var(--mily-ink);
+  border: 1.5px solid var(--mily-line);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+}
+.mily-input:focus { border-color: var(--mily-mocha); }
+
+.mily-send {
+  background: var(--mily-ink);
+  color: var(--mily-paper);
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: inherit;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.mily-send:hover:not(:disabled) { transform: translateY(-1px); }
+.mily-send:disabled { opacity: 0.45; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mily-typing i, .mily-chip, .mily-send { animation: none; transition: none; }
+}

@@ -1,6 +1,7 @@
 import '../App.css'
 
 import VerticalNav from '../components/VerticalNav'
+import AskMily from '../sections/mily/AskMily'
 import Shelf from '../sections/shelf/Shelf'
 import Boombox from '../sections/music/Boombox'
 
@@ -10,6 +11,14 @@ function Fun() {
       <VerticalNav />
 
       <div className="main-content">
+        <br></br>
+
+        <section id="mily">
+          <AskMily />
+        </section>
+
+        <br></br>
+        <br></br>
         <br></br>
 
         <section id="music">
