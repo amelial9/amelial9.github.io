@@ -11,7 +11,6 @@ const SUGGESTIONS = [
   'Who is Amelia?',
   'Where did Amelia work at?',
   'Any fun facts about Amelia?',
-  "What are some of Amelia's favorite TV shows?",
 ];
 
 function AskMily() {
