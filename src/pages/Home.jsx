@@ -47,7 +47,7 @@ function Home() {
               </span>
             </h1>
             <p className="intro">
-              🎓 I'm a third-year CS and Informatics student at the University of Washington with a love for building thoughtful, user-centered tech. 
+              🎓 I'm a fourth-year CS and Informatics student at the University of Washington with a love for building thoughtful, user-centered tech. 
               I'm a builder of everything from practical tools to wonderfully questionable side projects, and I thrive at the intersection of software engineering and product thinking. 
             </p>
             <p>
