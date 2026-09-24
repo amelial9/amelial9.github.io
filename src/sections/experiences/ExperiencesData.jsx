@@ -2,10 +2,19 @@ import cursorLogo from '../../assets/logos/cursor.png';
 import ischoolLogo from '../../assets/logos/ischool.jpg';
 import goldenLabLogo from '../../assets/logos/goldenlab.png';
 import ibmLogo from '../../assets/logos/ibm.jpg';
+import paulgallenLogo from '../../assets/logos/paulgallen.jpg';
 
 export const experiencesData = [
   {
-    date: 'June 2026 - Present',
+    date: 'Sep. 2026 - Present',
+    title: 'Teaching Assistant',
+    subtitle: 'Paul G. Allen School of Computer Science & Engineering',
+    description: 'teach SQL and databases',
+    skills: ['SQL', 'Database Systems', 'Transactions & Query Optimization', 'Distributed Data Processing'],
+    logo: paulgallenLogo,
+  },
+  {
+    date: 'Jun. 2026 - Sep. 2026',
     title: 'Software Developer Intern',
     subtitle: 'IBM',
     description: 'watsonx.ai QA automation',
@@ -16,7 +25,7 @@ export const experiencesData = [
     date: 'Mar. 2025 - Jun. 2026',
     title: 'Teaching Assistant',
     subtitle: 'University of Washington Information School',
-    description: 'teach SQL and database design',
+    description: 'teach SQL and databases',
     skills: ['SQL', 'Relational Databases', 'Data Modeling', 'Teaching & Mentorship'],
     logo: ischoolLogo,
   },
