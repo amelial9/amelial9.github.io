@@ -6,7 +6,7 @@ import loki from '../../assets/shelf/loki.jpg';
 import siliconValley from '../../assets/shelf/siliconvalley.jpg';
 import sky from '../../assets/shelf/sky.jpg';
 import honorOfKings from '../../assets/shelf/honorofkings.jpg';
-import drawGuess from '../../assets/shelf/drawandguess.jpg';
+import davethediver from '../../assets/shelf/davethediver.jpg';
 
 export const showsLabel = "Shows I've spent the most time on";
 export const gamesLabel = 'Games';
@@ -20,9 +20,9 @@ export const shows = [
 ];
 
 export const games = [
-  { title: 'Sky', art: sky, fit: 'cover', body: '#E7DCC5' },
+  { title: 'Dave the Diver', art: davethediver, fit: 'cover', body: '#DFD6C8' },
   { title: 'Honor of Kings', art: honorOfKings, fit: 'contain', iconBg: '#f3f1ec', body: '#EAD3B6' },
-  { title: 'Draw & Guess', art: drawGuess, fit: 'cover', body: '#DFD6C8' },
+  { title: 'Sky', art: sky, fit: 'cover', body: '#E7DCC5' },
 ];
 
 function Cover({ item }) {
