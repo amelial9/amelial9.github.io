@@ -14,6 +14,14 @@ export const experiencesData = [
     logo: paulgallenLogo,
   },
   {
+    date: 'Sep. 2024 - Present',
+    title: 'Research Assistant',
+    subtitle: 'Golden Lab, Department of Neurobiology and Biophysics, University of Washington',
+    description: '🐁 research mouse behavior',
+    skills: ['Python', 'Behavioral Data Analysis', 'Machine Learning'],
+    logo: goldenLabLogo,
+  },
+  {
     date: 'Jun. 2026 - Sep. 2026',
     title: 'Software Developer Intern',
     subtitle: 'IBM',
@@ -28,14 +36,6 @@ export const experiencesData = [
     description: 'teach SQL and databases',
     skills: ['SQL', 'Relational Databases', 'Data Modeling', 'Teaching & Mentorship'],
     logo: ischoolLogo,
-  },
-  {
-    date: 'Sep. 2024 - Present',
-    title: 'Research Assistant',
-    subtitle: 'Golden Lab, Department of Neurobiology and Biophysics, University of Washington',
-    description: '🐁 research mouse behavior',
-    skills: ['Python', 'Behavioral Data Analysis', 'Machine Learning'],
-    logo: goldenLabLogo,
   },
   {
     date: 'Aug. 2025 - Jun. 2026',
