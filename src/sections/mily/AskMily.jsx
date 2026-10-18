@@ -7,6 +7,24 @@ import './AskMily.css';
 const SPACE = 'amelial9/milybot';
 
 // Keep these in sync with the `examples` list in the milybot Space's app.py.
+// tiny cat face for Mily, drawn to match the cat cursor
+function MilyFace({ size = 'sm' }) {
+  return (
+    <svg className={`mily-face mily-face-${size}`} viewBox="0 0 32 30" aria-hidden="true">
+      <path
+        className="mily-cat"
+        d="M5 26 C2.5 22 2.5 17 4 13 L3.5 3.5 L11 8.5 C14 7.6 18 7.6 21 8.5 L28.5 3.5 L28 13 C29.5 17 29.5 22 27 26 C23 29 9 29 5 26 Z"
+      />
+      <g className="mily-eyes">
+        <circle cx="11.5" cy="17" r="1.4" />
+        <circle cx="20.5" cy="17" r="1.4" />
+      </g>
+      <path className="mily-line" d="M14 20.5 Q15 21.8 16 20.5 Q17 21.8 18 20.5" />
+      <path className="mily-line" d="M1 17.5 L5.5 18.5 M1 21 L5.5 20.5 M31 17.5 L26.5 18.5 M31 21 L26.5 20.5" />
+    </svg>
+  );
+}
+
 const SUGGESTIONS = [
   'Who is Amelia?',
   'Where did Amelia work at?',
@@ -97,23 +115,37 @@ function AskMily() {
       </p>
 
       <div className="mily-window">
+        <div className="mily-head">
+          <MilyFace />
+          <span className="mily-name">Mily</span>
+        </div>
+
         <div className="mily-chat" ref={chatRef}>
           {messages.length === 0 && (
             <div className="mily-empty">
-              👋 hi, i'm Mily. ask me anything about Amelia.
+              <MilyFace size="lg" />
+              <span>hi, i&apos;m Mily! ask me anything about Amelia.</span>
             </div>
           )}
           {messages.map((m, i) => {
             const isLast = i === messages.length - 1;
             const showTyping = m.role === 'mily' && m.text === '' && busy && isLast;
-            return (
-              <div key={i} className={`mily-msg mily-msg-${m.role}`}>
+            const bubble = (
+              <div className={`mily-msg mily-msg-${m.role}`}>
                 {showTyping ? (
                   <span className="mily-typing"><i /><i /><i /></span>
                 ) : (
                   m.text
                 )}
               </div>
+            );
+            return m.role === 'mily' ? (
+              <div key={i} className="mily-row">
+                <MilyFace />
+                {bubble}
+              </div>
+            ) : (
+              <div key={i} className="mily-row mily-row-user">{bubble}</div>
             );
           })}
         </div>
@@ -144,8 +176,11 @@ function AskMily() {
             className="mily-send"
             onClick={() => send()}
             disabled={busy || !input.trim()}
+            aria-label="Send"
           >
-            Send
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
           </button>
         </div>
       </div>

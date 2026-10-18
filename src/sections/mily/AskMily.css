@@ -1,4 +1,5 @@
-/* Ask Mily — greige/tan palette tuned to the Shelf consoles (lighter, less yellow) */
+/* Ask Mily — minimal chat that sits right on the page background,
+   greige/tan palette tuned to the Shelf consoles */
 .mily-section {
   --mily-ink: #473C35;
   --mily-paper: #F5F2EB;   /* card background — soft warm off-white */
@@ -50,68 +51,134 @@
   color: var(--mily-ink);
   opacity: 0.8;
   text-align: left;
-  margin: 0 0 1.25rem 0.25rem;
+  margin: 0 0 1.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+/* the chat card — clearly a window, but light enough to sit on the page */
+.mily-window {
+  background: #fff;
+  border: 1.5px solid var(--mily-line);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(71, 60, 53, 0.08);
+  overflow: hidden;
+}
+
+/* little header bar: face · name */
+.mily-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  background: var(--mily-paper);
+  border-bottom: 1.5px solid var(--mily-line);
+}
+.mily-name {
+  color: var(--mily-ink);
+  font-weight: 700;
   font-size: 0.95rem;
 }
-
-/* the chat "card" — fills the section width, matching the Shelf footprint */
-.mily-window {
-  background: var(--mily-paper);
-  border: 1.5px solid var(--mily-line);
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(71, 60, 53, 0.1);
-  padding: 1rem;
-}
-
+/* grows with the conversation, scrolls once it gets long */
 .mily-chat {
-  height: 340px;
+  min-height: 160px;
+  max-height: 360px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  padding: 0.25rem 0.25rem 0.5rem;
+  gap: 0.75rem;
+  padding: 1rem 1rem 0.5rem;
   scrollbar-width: thin;
   scrollbar-color: var(--mily-oat) transparent;
 }
-.mily-chat::-webkit-scrollbar { width: 8px; }
+.mily-chat::-webkit-scrollbar { width: 6px; }
 .mily-chat::-webkit-scrollbar-thumb {
   background: var(--mily-oat);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .mily-empty {
   margin: auto;
-  color: var(--mily-mocha);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--mily-ink);
+  opacity: 0.85;
   font-size: 0.95rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 0;
 }
 
+/* Mily's face — a tan line-art cat, same style as the cat cursor */
+.mily-face {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 28px;
+  overflow: visible;
+}
+.mily-face-lg {
+  width: 46px;
+  height: 43px;
+  animation: mily-bob 3s ease-in-out infinite;
+}
+.mily-cat {
+  fill: var(--mily-tan);
+  stroke: var(--mily-ink);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.mily-eyes {
+  fill: var(--mily-ink);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mily-blink 4s infinite;
+}
+.mily-line {
+  fill: none;
+  stroke: var(--mily-ink);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes mily-blink {
+  0%, 94%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
+}
+@keyframes mily-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.mily-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.mily-row-user { justify-content: flex-end; }
+
 .mily-msg {
-  max-width: 82%;
-  padding: 0.6rem 0.85rem;
-  border-radius: 14px;
+  max-width: 78%;
+  padding: 0.55rem 0.85rem;
+  border-radius: 16px;
   font-size: 0.95rem;
-  line-height: 1.45;
+  line-height: 1.5;
   text-align: left;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* visitor bubble — mocha, right aligned */
+/* visitor — mocha, right aligned */
 .mily-msg-user {
-  align-self: flex-end;
   background: var(--mily-mocha);
   color: var(--mily-cream);
   border-bottom-right-radius: 4px;
 }
 
-/* Mily bubble — tan, left aligned */
+/* Mily — soft oat bubble next to her face */
 .mily-msg-mily {
-  align-self: flex-start;
-  background: var(--mily-tan);
+  background: var(--mily-oat);
   color: var(--mily-ink);
-  border: 1px solid var(--mily-line);
   border-bottom-left-radius: 4px;
 }
 
@@ -119,7 +186,7 @@
 .mily-typing {
   display: inline-flex;
   gap: 4px;
-  padding: 2px 0;
+  padding: 4px 0;
 }
 .mily-typing i {
   width: 6px;
@@ -137,62 +204,92 @@
   30% { transform: translateY(-4px); opacity: 0.9; }
 }
 
-/* suggestion chips */
+/* suggestion chips — quiet text pills */
 .mily-suggests {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.75rem 0;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem 0.75rem;
 }
 .mily-chip {
-  background: transparent;
+  background: var(--mily-paper);
   color: var(--mily-ink);
-  border: 1.5px solid var(--mily-line);
+  border: none;
   border-radius: 999px;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.82rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
   font-family: inherit;
+  cursor: pointer;
   transition: background 0.15s ease, transform 0.15s ease;
 }
 .mily-chip:hover:not(:disabled) {
-  background: var(--mily-oat);
+  background: var(--mily-tan);
   transform: translateY(-1px);
 }
-.mily-chip:disabled { opacity: 0.5; }
+.mily-chip:disabled { opacity: 0.5; cursor: default; }
 
-/* input row */
+/* input — one pill with the send button tucked inside */
 .mily-input-row {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
-}
-.mily-input {
-  flex: 1;
+  gap: 0.25rem;
   background: #fff;
-  color: var(--mily-ink);
   border: 1.5px solid var(--mily-line);
   border-radius: 999px;
-  padding: 0.6rem 1rem;
+  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  margin: 0 1rem 1rem;
+  transition: border-color 0.15s ease;
+}
+.mily-input-row:focus-within { border-color: var(--mily-mocha); }
+.mily-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: var(--mily-ink);
+  border: none;
+  padding: 0.45rem 0;
   font-size: 0.95rem;
   font-family: inherit;
   outline: none;
 }
-.mily-input:focus { border-color: var(--mily-mocha); }
+.mily-input::placeholder { color: var(--mily-mocha); opacity: 0.6; }
 
 .mily-send {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
   background: var(--mily-ink);
-  color: var(--mily-paper);
   border: none;
-  border-radius: 999px;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  font-family: inherit;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
+.mily-send svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--mily-cream);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .mily-send:hover:not(:disabled) { transform: translateY(-1px); }
-.mily-send:disabled { opacity: 0.45; }
+.mily-send:disabled { opacity: 0.3; cursor: default; }
+
+/* phones: give the bubbles every pixel we can */
+@media (max-width: 600px) {
+  .mily-chat { padding: 0.85rem 0.65rem 0.5rem; }
+  .mily-suggests { padding: 0.5rem 0.65rem 0.65rem; }
+  .mily-input-row { margin: 0 0.65rem 0.65rem; }
+  .mily-row { gap: 0.35rem; }
+  .mily-msg { max-width: 88%; font-size: 0.9rem; }
+  .mily-chat .mily-face:not(.mily-face-lg) { width: 24px; height: 22px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .mily-typing i, .mily-chip, .mily-send { animation: none; transition: none; }
+  .mily-typing i, .mily-eyes, .mily-face-lg { animation: none; }
+  .mily-chip, .mily-send { transition: none; }
 }
