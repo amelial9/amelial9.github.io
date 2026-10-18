@@ -174,23 +174,7 @@
    ============================================================ */
 .games-block { margin-bottom: 3rem; }
 
-.games-label {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: var(--shelf-ink);
-  font-size: 1rem;
-  text-align: left;
-  margin: 0 0 1.5rem 0.5rem;
-  opacity: 0.85;
-}
-.games-icon {
-  width: 22px;
-  height: 22px;
-  flex: 0 0 auto;
-  fill: var(--shelf-ink);
-  shape-rendering: crispEdges;
-}
+.games-label { margin-bottom: 1.5rem; }
 
 /* mobile-first: devices are a fixed size and simply wrap — one per row on a
    phone, more per row as the viewport widens. No breakpoints needed. */

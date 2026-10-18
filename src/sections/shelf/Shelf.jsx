@@ -9,7 +9,7 @@ import honorOfKings from '../../assets/shelf/honorofkings.jpg';
 import davethediver from '../../assets/shelf/davethediver.jpg';
 
 export const showsLabel = "Shows I've spent the most time on";
-export const gamesLabel = 'Games';
+export const gamesLabel = "Games that keep me up way too late";
 
 export const shows = [
   { title: 'How I Met Your Mother', color: 'sand', poster: himym },
@@ -55,23 +55,6 @@ function ShelfRow({ label, items, kind }) {
   );
 }
 
-// pixel d-pad + buttons for the little section label
-function ControllerIcon() {
-  return (
-    <svg className="games-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="9" y="3" width="2" height="6" />
-      <rect x="7" y="5" width="6" height="2" />
-      <rect x="15" y="4" width="2" height="2" />
-      <rect x="18" y="7" width="2" height="2" />
-      <rect x="15" y="10" width="2" height="2" />
-      <rect x="12" y="7" width="2" height="2" />
-      <rect x="3" y="13" width="18" height="8" rx="2" />
-      <rect x="6" y="16" width="2" height="2" fill="var(--shelf-cream)" />
-      <rect x="16" y="16" width="2" height="2" fill="var(--shelf-cream)" />
-    </svg>
-  );
-}
-
 // each game as its own horizontal handheld (d-pad · screen · buttons)
 function Handheld({ item }) {
   return (
@@ -109,10 +92,7 @@ function Handheld({ item }) {
 function ConsolesBlock({ label, items }) {
   return (
     <div className="games-block">
-      <p className="games-label">
-        <ControllerIcon />
-        {label}
-      </p>
+      <p className="shelf-label games-label">{label}</p>
       <div className="consoles-grid">
         {items.map((item, i) => (
           <Handheld key={`game-${i}`} item={item} />
