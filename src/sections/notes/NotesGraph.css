@@ -1,0 +1,221 @@
+.notes-graph-section {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.notes-graph-title-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.notes-graph-title {
+  color: #473C35;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.02em;
+}
+
+.notes-graph-subtitle {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.notes-graph-link {
+  color: #473C35;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.notes-graph-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #473C35;
+  transition: width 0.3s ease;
+}
+
+.notes-graph-link:hover::after {
+  width: 100%;
+}
+
+.notes-graph-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  outline: 1.5px solid transparent;
+  transition: outline-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notes-graph-card--active {
+  outline-color: rgba(71, 60, 53, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.notes-graph-card:fullscreen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  outline: none;
+}
+
+.notes-graph-card:fullscreen .notes-graph-canvas-wrap {
+  flex: 1;
+  height: auto;
+}
+
+.notes-graph-canvas-wrap {
+  position: relative;
+  height: 360px;
+}
+
+.notes-graph-canvas {
+  display: block;
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  /* Let the page keep scrolling on phones when a finger lands on the graph. */
+  touch-action: pan-y;
+}
+
+.notes-graph-canvas--pointer {
+  cursor: var(--cursor-image-hover, pointer), pointer;
+}
+
+.notes-graph-canvas:active {
+  cursor: grabbing;
+}
+
+.notes-graph-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.notes-graph-tooltip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 14px));
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem 0.7rem;
+  background: #473C35;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-align: center;
+  width: max-content;
+  max-width: 220px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.notes-graph-tooltip--left {
+  transform: translate(-16px, calc(-100% - 14px));
+  text-align: left;
+}
+
+.notes-graph-tooltip--right {
+  transform: translate(calc(-100% + 16px), calc(-100% - 14px));
+  text-align: right;
+}
+
+.notes-graph-tooltip span {
+  color: #d7d3bf;
+  font-size: 0.75rem;
+}
+
+.notes-graph-controls {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.notes-graph-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: white;
+  color: #473C35;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.notes-graph-control:hover {
+  background: #473C35;
+  color: white;
+  border-color: #473C35;
+}
+
+.notes-graph-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translate(-50%, 6px);
+  padding: 0.3rem 0.75rem;
+  background: rgba(71, 60, 53, 0.85);
+  color: white;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notes-graph-hint--show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.notes-graph-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid #f0f0f0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 769px) {
+  .notes-graph-section {
+    padding: 2rem;
+  }
+
+  .notes-graph-title {
+    font-size: 2.25rem;
+  }
+
+  .notes-graph-canvas-wrap {
+    height: 520px;
+  }
+}
+
+.notes-graph-footer-hint {
+  font-style: italic;
+  color: #999;
+}

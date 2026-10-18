@@ -5,6 +5,7 @@ import IconLink from '../components/IconLink'
 import Experiences from '../sections/experiences/Experiences'
 import VerticalNav from '../components/VerticalNav'
 import Projects from '../sections/projects/Projects'
+import NotesGraph from '../sections/notes/NotesGraph'
 
 import portraitPic from '../assets/icons/portrait.svg'
 import linkedin from '../assets/icons/linkedin.svg'
@@ -78,6 +79,14 @@ function Home() {
 
         <section id="projects">
           <Projects />
+        </section>
+
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <section id="notes">
+          <NotesGraph />
         </section>
 
         <br></br>
